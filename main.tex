@@ -1,0 +1,98 @@
+%!TEX program = pdflatex
+
+\documentclass[acmsmall,nonacm,anonymous,review,screen]{acmart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+% ---------- My Packages ----------
+
+\usepackage[commandnameprefix=ifneeded,commentmarkup=footnote]{changes}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+%\setlist{topsep=5pt}
+\usepackage{makecell}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{positioning}
+\usepackage{adjustbox}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{mathpartir}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\algtext*{EndProcedure}
+\algtext*{EndIf}
+\algtext*{EndFor}
+\algtext*{EndWhile}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[algorithm]{font=footnotesize}
+
+% ---------- My Commands ----------
+
+\DeclareRobustCommand{\circled}[1]{
+    \tikz[baseline=(char.base)]{
+        \node[shape=circle, draw, inner sep=0.5pt] (char) {#1};
+    }
+}
+\DeclareRobustCommand{\roundbox}[1]{
+    \tikz[baseline=(word.base)]{
+        \node [rounded rectangle, draw=black, fill=white, inner sep=4pt] (word) {#1};
+    }
+}
+
+\newcommand{\textred}[1]{\textcolor{BrickRed}{#1}}
+\newcommand{\textgreen}[1]{\textcolor{ForestGreen}{#1}}
+\newcommand{\textorange}[1]{\textcolor{BurntOrange}{#1}}
+\newcommand{\textblue}[1]{\textcolor{Blue}{#1}}
+\newcommand{\textpurple}[1]{\textcolor{Purple}{#1}}
+
+\newtheorem{axiom}{Axiom}[section]
+\theoremstyle{acmdefinition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\DeclareRobustCommand{\endparagraph}{\vspace{1.2ex plus 1ex minus 0.2ex}}
+
+\newcommand{\hltext}[2]{\colorbox{#1!10}{#2}}
+\newcommand{\revision}[1]{#1}
+\newcommand{\rerevision}[1]{#1}
+
+% ---------- Formalism ----------
+
+%\input{notations}
+
+% ---------- Abbreviations ----------
+\newcommand{\tia}{\textsc{Tia}\xspace}
+
+\begin{document}
+
+\title{Temporal Influence Analysis for Hardware Designs in Chisel}
+
+\author{Jiacai Cui}
+\orcid{0009-0001-4922-887X}
+\email{jiacaicui@smail.nju.edu.cn}
+\affiliation{
+    \institution{Nanjing University}
+    \country{China}
+}
+
+\input{abstract}
+
+\maketitle
+
+\input{intro}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

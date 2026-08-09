@@ -1,0 +1,71 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{2}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Chen et~al\mbox{.}(2026)]%
+        {chen_exploiting_2026}
+\bibfield{author}{\bibinfo{person}{Qinlin Chen}, \bibinfo{person}{Nairen
+  Zhang}, \bibinfo{person}{Jinpeng Wang}, \bibinfo{person}{Jiacai Cui},
+  \bibinfo{person}{Tian Tan}, \bibinfo{person}{Xiaoxing Ma},
+  \bibinfo{person}{Chang Xu}, \bibinfo{person}{Jian Lu}, {and}
+  \bibinfo{person}{Yue Li}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Exploiting {Sophisticated} {Static} {Analysis} for
+  {Verilog}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{10}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2026}), \bibinfo{pages}{1327--1355}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3808300}{doi:\nolinkurl{10.1145/3808300}}
+
+
+\bibitem[Cui et~al\mbox{.}(2026)]%
+        {cui_chisa_2026}
+\bibfield{author}{\bibinfo{person}{Jiacai Cui}, \bibinfo{person}{Qinlin Chen},
+  \bibinfo{person}{Zhongsheng Zhan}, \bibinfo{person}{Tian Tan}, {and}
+  \bibinfo{person}{Yue Li}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{ChiSA}: {Static} {Analysis} for {Lightweight}
+  {Chisel} {Verification}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{10}, \bibinfo{number}{POPL} (\bibinfo{date}{Jan.}
+  \bibinfo{year}{2026}), \bibinfo{pages}{507--539}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3776660}{doi:\nolinkurl{10.1145/3776660}}
+
+
+\end{thebibliography}
