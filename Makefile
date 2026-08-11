@@ -1,18 +1,16 @@
-PAPER = main
-TEX = $(wildcard *.tex tables/*.tex figures/*.tex)
+TARGET = main
 BIB = references.bib
-FIGS = $(wildcard figures/*.pdf figures/*.png)
 
-.PHONY: all clean
+all: $(TARGET).pdf
 
-all: $(PAPER).pdf
-
-$(PAPER).pdf: $(TEX) $(BIB) $(FIGS)
-	echo $(FIGS)
-	pdflatex $(PAPER)
-	bibtex $(PAPER)
-	pdflatex $(PAPER)
-	pdflatex $(PAPER)
+$(TARGET).pdf: $(TARGET).tex $(BIB)
+	latexmk -pdf $(TARGET).tex
 
 clean:
-	rm -f *.aux *.bbl *.blg *.log *.out $(PAPER).pdf
+	latexmk -c
+	rm -f $(TARGET).bbl $(TARGET).run.xml
+
+cleanall:
+	latexmk -C
+
+.PHONY: all clean cleanall
