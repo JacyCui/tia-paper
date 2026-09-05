@@ -8,7 +8,8 @@ $(TARGET).pdf: $(TARGET).tex $(BIB)
 
 clean:
 	latexmk -c
-	rm -f $(TARGET).bbl $(TARGET).run.xml
+	rm -f $(TARGET).pdf
+	rm -f $(TARGET).bbl $(TARGET).run.xml $(TARGET).loc $(TARGET).soc 
 
 cleanall:
 	latexmk -C

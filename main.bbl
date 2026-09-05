@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{43}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,6 +36,118 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[qua(2023)]%
+        {quasar}
+ \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Quasar 2.0: Chisel equivalent of SweRV-EL2}.
+\newblock \bibinfo{howpublished}{\url
+  {https://github.com/Lampro-Mellon/Quasar/tree/2bc0985afd670d0c9b1b6983b53c3c2b340fcb5a}}.
+\newblock
+
+
+\bibitem[ope(2026)]%
+        {opencores}
+ \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Open Cores}.
+\newblock \bibinfo{howpublished}{\url{https://opencores.org/}}.
+\newblock
+
+
+\bibitem[Alatoun and Vemuri(2022)]%
+        {alatoun_efficient_2022}
+\bibfield{author}{\bibinfo{person}{Khitam~M. Alatoun} {and}
+  \bibinfo{person}{Ranga Vemuri}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Efficient {Method} for {Timing}-based {Information}
+  {Flow} {Verification} in {Hardware} {Designs}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the {Great} {Lakes} {Symposium} on
+  {VLSI} 2022}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{Irvine CA USA},
+  \bibinfo{pages}{159--163}.
+\newblock
+\showISBNx{978-1-4503-9322-5}
+\href{https://doi.org/10.1145/3526241.3530363}{doi:\nolinkurl{10.1145/3526241.3530363}}
+
+
+\bibitem[Ardeshiricham et~al\mbox{.}(2017)]%
+        {ardeshiricham_clepsydra_2017}
+\bibfield{author}{\bibinfo{person}{Armaiti Ardeshiricham}, \bibinfo{person}{Wei
+  Hu}, {and} \bibinfo{person}{Ryan Kastner}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Clepsydra: {Modeling} timing flows in hardware
+  designs}. In \bibinfo{booktitle}{\emph{2017 {IEEE}/{ACM} {International}
+  {Conference} on {Computer}-{Aided} {Design} ({ICCAD})}}.
+  \bibinfo{publisher}{IEEE}, \bibinfo{address}{Irvine, CA},
+  \bibinfo{pages}{147--154}.
+\newblock
+\showISBNx{978-1-5386-3093-8}
+\href{https://doi.org/10.1109/ICCAD.2017.8203772}{doi:\nolinkurl{10.1109/ICCAD.2017.8203772}}
+
+
+\bibitem[Asanović et~al\mbox{.}(2016)]%
+        {asanovic_rocket_2016}
+\bibfield{author}{\bibinfo{person}{Krste Asanović}, \bibinfo{person}{Rimas
+  Avizienis}, \bibinfo{person}{Jonathan Bachrach}, \bibinfo{person}{Scott
+  Beamer}, \bibinfo{person}{David Biancolin}, \bibinfo{person}{Christopher
+  Celio}, \bibinfo{person}{Henry Cook}, \bibinfo{person}{Daniel Dabbelt},
+  \bibinfo{person}{John Hauser}, \bibinfo{person}{Adam Izraelevitz},
+  \bibinfo{person}{Sagar Karandikar}, \bibinfo{person}{Ben Keller},
+  \bibinfo{person}{Donggyu Kim}, \bibinfo{person}{John Koenig},
+  \bibinfo{person}{Yunsup Lee}, \bibinfo{person}{Eric Love},
+  \bibinfo{person}{Martin Maas}, \bibinfo{person}{Albert Magyar},
+  \bibinfo{person}{Howard Mao}, \bibinfo{person}{Miquel Moreto},
+  \bibinfo{person}{Albert Ou}, \bibinfo{person}{David~A. Patterson},
+  \bibinfo{person}{Brian Richards}, \bibinfo{person}{Colin Schmidt},
+  \bibinfo{person}{Stephen Twigg}, \bibinfo{person}{Huy Vo}, {and}
+  \bibinfo{person}{Andrew Waterman}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The {Rocket} {Chip} {Generator}}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} UCB/EECS-2016-17.
+\newblock
+\urldef\tempurl%
+\url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-17.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Bruant et~al\mbox{.}(2020)]%
+        {bruant_systemverilog_2020}
+\bibfield{author}{\bibinfo{person}{Jean Bruant}, \bibinfo{person}{Pierre-Henri
+  Horrein}, \bibinfo{person}{Olivier Muller}, \bibinfo{person}{Tristan
+  Groleat}, {and} \bibinfo{person}{Frederic Petrot}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{({System}){Verilog} to {Chisel} {Translation} for
+  {Faster} {Hardware} {Design}}. In \bibinfo{booktitle}{\emph{2020
+  {International} {Workshop} on {Rapid} {System} {Prototyping} ({RSP})}}.
+  \bibinfo{publisher}{IEEE}, \bibinfo{address}{Hamburg, Germany},
+  \bibinfo{pages}{1--7}.
+\newblock
+\showISBNx{978-1-7281-8466-1}
+\href{https://doi.org/10.1109/RSP51120.2020.9244852}{doi:\nolinkurl{10.1109/RSP51120.2020.9244852}}
+
+
+\bibitem[Burke(2019)]%
+        {fixed-point-math}
+\bibfield{author}{\bibinfo{person}{Tom Burke}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Fixed Point Math Library for Verilog}.
+\newblock
+  \bibinfo{howpublished}{\url{https://opencores.org/projects/verilog_fixed_point_math_library}}.
+\newblock
+
+
+\bibitem[Celio et~al\mbox{.}(2015)]%
+        {celio_berkeley_2015}
+\bibfield{author}{\bibinfo{person}{Christopher Celio},
+  \bibinfo{person}{David~A. Patterson}, {and} \bibinfo{person}{Krste
+  Asanović}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The {Berkeley} {Out}-of-{Order} {Machine}
+  ({BOOM}): {An} {Industry}-{Competitive}, {Synthesizable}, {Parameterized}
+  {RISC}-{V} {Processor}}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} UCB/EECS-2015-167.
+\newblock
+\urldef\tempurl%
+\url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-167.html}
+\showURL{%
+\tempurl}
+
+
 \bibitem[Chen et~al\mbox{.}(2026)]%
         {chen_exploiting_2026}
 \bibfield{author}{\bibinfo{person}{Qinlin Chen}, \bibinfo{person}{Nairen
@@ -53,6 +165,20 @@
 \href{https://doi.org/10.1145/3808300}{doi:\nolinkurl{10.1145/3808300}}
 
 
+\bibitem[Chong(2021)]%
+        {chong_clock_2021}
+\bibfield{author}{\bibinfo{person}{Ang~Boon Chong}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Clock {Domain} {Crossing} {Verification}
+  {Challenges}}. In \bibinfo{booktitle}{\emph{2021 2nd {International}
+  {Conference} on {Electronics}, {Communications} and {Information}
+  {Technology} ({CECIT})}}. \bibinfo{publisher}{IEEE}, \bibinfo{address}{Sanya,
+  China}, \bibinfo{pages}{383--387}.
+\newblock
+\showISBNx{978-1-6654-3757-8}
+\href{https://doi.org/10.1109/CECIT53797.2021.00075}{doi:\nolinkurl{10.1109/CECIT53797.2021.00075}}
+
+
 \bibitem[Cui et~al\mbox{.}(2026)]%
         {cui_chisa_2026}
 \bibfield{author}{\bibinfo{person}{Jiacai Cui}, \bibinfo{person}{Qinlin Chen},
@@ -66,6 +192,439 @@
 \newblock
 \showISSN{2475-1421}
 \href{https://doi.org/10.1145/3776660}{doi:\nolinkurl{10.1145/3776660}}
+
+
+\bibitem[Delaitre et~al\mbox{.}(2018)]%
+        {delaitre_sate_2018}
+\bibfield{author}{\bibinfo{person}{Aurelien Delaitre},
+  \bibinfo{person}{Bertrand Stivalet}, \bibinfo{person}{Paul~E Black},
+  \bibinfo{person}{Vadim Okun}, \bibinfo{person}{Athos Ribeiro}, {and}
+  \bibinfo{person}{Terry~S Cohen}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{SATE} {V} report: ten years of static
+  analysis tool expositions}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} NIST SP 500-326.
+  \bibinfo{institution}{National Institute of Standards and Technology},
+  \bibinfo{address}{Gaithersburg, MD}. \bibinfo{pages}{NIST SP 500--326} pages.
+\newblock
+\href{https://doi.org/10.6028/NIST.SP.500-326}{doi:\nolinkurl{10.6028/NIST.SP.500-326}}
+
+
+\bibitem[Forencich(2015)]%
+        {axi-stream-fifo}
+\bibfield{author}{\bibinfo{person}{Alex Forencich}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{AXI Stream FIFO}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/alexforencich/verilog-axis/commit/382226ad5966198862fb676c7a5810067c2c6a19}}.
+\newblock
+
+
+\bibitem[Forencich(2019)]%
+        {axis-frame-len}
+\bibfield{author}{\bibinfo{person}{Alex Forencich}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Corundum AXI Frame Length}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/corundum/corundum/commit/0b2066abe3d8983a120cb8afe598c2710f2e5be6}}.
+\newblock
+
+
+\bibitem[Gajewski(2019)]%
+        {montgomery-modmult}
+\bibfield{author}{\bibinfo{person}{Krzysztof Gajewski}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Montgomery Modular Multiplier and Exponentiator}.
+\newblock
+  \bibinfo{howpublished}{\url{https://opencores.org/projects/mod_mult_exp}}.
+\newblock
+
+
+\bibitem[Genc et~al\mbox{.}(2021)]%
+        {genc_gemmini_2021}
+\bibfield{author}{\bibinfo{person}{Hasan Genc}, \bibinfo{person}{Seah Kim},
+  \bibinfo{person}{Alon Amid}, \bibinfo{person}{Ameer Haj-Ali},
+  \bibinfo{person}{Vighnesh Iyer}, \bibinfo{person}{Pranav Prakash},
+  \bibinfo{person}{Jerry Zhao}, \bibinfo{person}{Daniel Grubb},
+  \bibinfo{person}{Harrison Liew}, \bibinfo{person}{Howard Mao},
+  \bibinfo{person}{Albert Ou}, \bibinfo{person}{Colin Schmidt},
+  \bibinfo{person}{Samuel Steffl}, \bibinfo{person}{John Wright},
+  \bibinfo{person}{Ion Stoica}, \bibinfo{person}{Jonathan Ragan-Kelley},
+  \bibinfo{person}{Krste Asanovic}, \bibinfo{person}{Borivoje Nikolic}, {and}
+  \bibinfo{person}{Yakun~Sophia Shao}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Gemmini: {Enabling} {Systematic} {Deep}-{Learning}
+  {Architecture} {Evaluation} via {Full}-{Stack} {Integration}}. In
+  \bibinfo{booktitle}{\emph{2021 58th {ACM}/{IEEE} {Design} {Automation}
+  {Conference} ({DAC})}}. \bibinfo{publisher}{IEEE}, \bibinfo{address}{San
+  Francisco, CA, USA}, \bibinfo{pages}{769--774}.
+\newblock
+\showISBNx{978-1-66543-274-0}
+\href{https://doi.org/10.1109/DAC18074.2021.9586216}{doi:\nolinkurl{10.1109/DAC18074.2021.9586216}}
+
+
+\bibitem[Gisselquist(2019)]%
+        {sdspi}
+\bibfield{author}{\bibinfo{person}{Dan Gisselquist}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{SD-Card Controller}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/ZipCPU/sdspi/commit/e3d46ab24f79b62544fb11a49de77504bbdab83f}}.
+\newblock
+
+
+\bibitem[Helm et~al\mbox{.}(2024)]%
+        {helm_total_2024}
+\bibfield{author}{\bibinfo{person}{Dominik Helm}, \bibinfo{person}{Sven
+  Keidel}, \bibinfo{person}{Anemone Kampkötter}, \bibinfo{person}{Johannes
+  Düsing}, \bibinfo{person}{Tobias Roth}, \bibinfo{person}{Ben Hermann}, {and}
+  \bibinfo{person}{Mira Mezini}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Total {Recall}? {How} {Good} {Are} {Static} {Call}
+  {Graphs} {Really}?}. In \bibinfo{booktitle}{\emph{Proceedings of the 33rd
+  {ACM} {SIGSOFT} {International} {Symposium} on {Software} {Testing} and
+  {Analysis}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{Vienna Austria},
+  \bibinfo{pages}{112--123}.
+\newblock
+\showISBNx{979-8-4007-0612-7}
+\href{https://doi.org/10.1145/3650212.3652114}{doi:\nolinkurl{10.1145/3650212.3652114}}
+
+
+\bibitem[Hsing(2012)]%
+        {aes128}
+\bibfield{author}{\bibinfo{person}{Homer Hsing}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{title}{AES-T100}.
+\newblock
+  \bibinfo{howpublished}{\url{https://trust-hub.org/downloads/resource/benchmarks/AES/AES-T100.zip}}.
+\newblock
+
+
+\bibitem[Hu et~al\mbox{.}(2022)]%
+        {hu_hardware_2022}
+\bibfield{author}{\bibinfo{person}{Wei Hu}, \bibinfo{person}{Armaiti
+  Ardeshiricham}, {and} \bibinfo{person}{Ryan Kastner}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Hardware {Information} {Flow} {Tracking}}.
+\newblock \bibinfo{journal}{\emph{ACM Comput. Surv.}} \bibinfo{volume}{54},
+  \bibinfo{number}{4} (\bibinfo{date}{May} \bibinfo{year}{2022}),
+  \bibinfo{pages}{1--39}.
+\newblock
+\showISSN{0360-0300, 1557-7341}
+\href{https://doi.org/10.1145/3447867}{doi:\nolinkurl{10.1145/3447867}}
+
+
+\bibitem[Izraelevitz et~al\mbox{.}(2017)]%
+        {izraelevitz_reusability_2017}
+\bibfield{author}{\bibinfo{person}{Adam Izraelevitz}, \bibinfo{person}{Jack
+  Koenig}, \bibinfo{person}{Patrick Li}, \bibinfo{person}{Richard Lin},
+  \bibinfo{person}{Angie Wang}, \bibinfo{person}{Albert Magyar},
+  \bibinfo{person}{Donggyu Kim}, \bibinfo{person}{Colin Schmidt},
+  \bibinfo{person}{Chick Markley}, \bibinfo{person}{Jim Lawson}, {and}
+  \bibinfo{person}{Jonathan Bachrach}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Reusability is {FIRRTL} ground: {Hardware}
+  construction languages, compiler frameworks, and transformations}. In
+  \bibinfo{booktitle}{\emph{2017 {IEEE}/{ACM} {International} {Conference} on
+  {Computer}-{Aided} {Design} ({ICCAD})}}. \bibinfo{publisher}{IEEE},
+  \bibinfo{address}{Irvine, CA}, \bibinfo{pages}{209--216}.
+\newblock
+\showISBNx{978-1-5386-3093-8}
+\href{https://doi.org/10.1109/ICCAD.2017.8203780}{doi:\nolinkurl{10.1109/ICCAD.2017.8203780}}
+
+
+\bibitem[Lee et~al\mbox{.}(2015)]%
+        {lee_hwacha_2015}
+\bibfield{author}{\bibinfo{person}{Yunsup Lee}, \bibinfo{person}{Albert Ou},
+  \bibinfo{person}{Colin Schmidt}, \bibinfo{person}{Sagar Karandikar},
+  \bibinfo{person}{Howard Mao}, {and} \bibinfo{person}{Krste Asanović}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The {Hwacha} {Microarchitecture} {Manual},
+  {Version} 3.8.1}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} UCB/EECS-2015-263.
+\newblock
+\urldef\tempurl%
+\url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-263.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Liang et~al\mbox{.}(2025)]%
+        {liang_pointer_2025}
+\bibfield{author}{\bibinfo{person}{Yufei Liang}, \bibinfo{person}{Teng Zhang},
+  \bibinfo{person}{Ganlin Li}, \bibinfo{person}{Tian Tan},
+  \bibinfo{person}{Chang Xu}, \bibinfo{person}{Chun Cao},
+  \bibinfo{person}{Xiaoxing Ma}, {and} \bibinfo{person}{Yue Li}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Pointer {Analysis} for {Database}-{Backed}
+  {Applications}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2025}), \bibinfo{pages}{1417--1441}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3729307}{doi:\nolinkurl{10.1145/3729307}}
+
+
+\bibitem[Ma et~al\mbox{.}(2022a)]%
+        {ma_debugging_2022}
+\bibfield{author}{\bibinfo{person}{Jiacheng Ma}, \bibinfo{person}{Gefei Zuo},
+  \bibinfo{person}{Kevin Loughlin}, \bibinfo{person}{Haoyang Zhang},
+  \bibinfo{person}{Andrew Quinn}, {and} \bibinfo{person}{Baris Kasikci}.}
+  \bibinfo{year}{2022}\natexlab{a}.
+\newblock \showarticletitle{Debugging in the brave new world of reconfigurable
+  hardware}. In \bibinfo{booktitle}{\emph{Proceedings of the 27th {ACM}
+  {International} {Conference} on {Architectural} {Support} for {Programming}
+  {Languages} and {Operating} {Systems}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{Lausanne Switzerland}, \bibinfo{pages}{946--962}.
+\newblock
+\showISBNx{978-1-4503-9205-1}
+\href{https://doi.org/10.1145/3503222.3507701}{doi:\nolinkurl{10.1145/3503222.3507701}}
+
+
+\bibitem[Ma et~al\mbox{.}(2022b)]%
+        {ma_debugging_2022_artifact}
+\bibfield{author}{\bibinfo{person}{Jiacheng Ma}, \bibinfo{person}{Gefei Zuo},
+  \bibinfo{person}{Kevin Loughlin}, \bibinfo{person}{Haoyang Zhang},
+  \bibinfo{person}{Andrew Quinn}, {and} \bibinfo{person}{Baris Kasikci}.}
+  \bibinfo{year}{2022}\natexlab{b}.
+\newblock \bibinfo{title}{Debugging in the brave new world of reconfigurable
+  hardware (Bugbase Artifact)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/efeslab/hardware-bugbase.git}}.
+\newblock
+
+
+\bibitem[Mach(2019)]%
+        {cva6-f2i-cast}
+\bibfield{author}{\bibinfo{person}{Stefan Mach}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{CVA6 CVFPU F2I Cast}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/alexforencich/verilog-axis/commit/382226ad5966198862fb676c7a5810067c2c6a19}}.
+\newblock
+
+
+\bibitem[marsgod@opencores.org(2018)]%
+        {sha1}
+\bibfield{author}{\bibinfo{person}{marsgod@opencores.org}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{Secure Hash Algorithm (SHA-160)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://opencores.org/projects/sha_core}}.
+\newblock
+
+
+\bibitem[McQueen(2001a)]%
+        {rsa-modmult}
+\bibfield{author}{\bibinfo{person}{Steven~R. McQueen}.}
+  \bibinfo{year}{2001}\natexlab{a}.
+\newblock \bibinfo{title}{BasicRSA-T400 (The Modular Multiplication
+  Component)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://trust-hub.org/downloads/resource/benchmarks/BASIC-RSA/BasicRSA-T400.rar}}.
+\newblock
+
+
+\bibitem[McQueen(2001b)]%
+        {rsa-cypher}
+\bibfield{author}{\bibinfo{person}{Steven~R. McQueen}.}
+  \bibinfo{year}{2001}\natexlab{b}.
+\newblock \bibinfo{title}{BasicRSA-T400 (The RSA Cypher)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://trust-hub.org/downloads/resource/benchmarks/BASIC-RSA/BasicRSA-T400.rar}}.
+\newblock
+
+
+\bibitem[Nagy(2019)]%
+        {ad-pn-mon}
+\bibfield{author}{\bibinfo{person}{Laszlo Nagy}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{ADI PN Monitor}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/analogdevicesinc/hdl/commit/8476993c1bc9ab5977a3b776e69cd393ea342fc7}}.
+\newblock
+
+
+\bibitem[Nagy and Winter(2019)]%
+        {data-offload-fsm}
+\bibfield{author}{\bibinfo{person}{Mihaita Nagy} {and} \bibinfo{person}{David
+  Winter}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{ADI Data Offload FSM}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/analogdevicesinc/hdl/commit/2b55c7453b8d8e44a7e7724ea4b26962abb7fe64}}.
+\newblock
+
+
+\bibitem[Nigam et~al\mbox{.}(2023)]%
+        {nigam_modular_2023}
+\bibfield{author}{\bibinfo{person}{Rachit Nigam},
+  \bibinfo{person}{Pedro~Henrique Azevedo De~Amorim}, {and}
+  \bibinfo{person}{Adrian Sampson}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Modular {Hardware} {Design} with {Timeline}
+  {Types}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{7}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2023}), \bibinfo{pages}{343--367}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3591234}{doi:\nolinkurl{10.1145/3591234}}
+
+
+\bibitem[Park et~al\mbox{.}(2022)]%
+        {park_survey_2022}
+\bibfield{author}{\bibinfo{person}{Jihyeok Park}, \bibinfo{person}{Hongki Lee},
+  {and} \bibinfo{person}{Sukyoung Ryu}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{A {Survey} of {Parametric} {Static} {Analysis}}.
+\newblock \bibinfo{journal}{\emph{ACM Comput. Surv.}} \bibinfo{volume}{54},
+  \bibinfo{number}{7} (\bibinfo{date}{Sept.} \bibinfo{year}{2022}),
+  \bibinfo{pages}{1--37}.
+\newblock
+\showISSN{0360-0300, 1557-7341}
+\href{https://doi.org/10.1145/3464457}{doi:\nolinkurl{10.1145/3464457}}
+
+
+\bibitem[Piedra(2017)]%
+        {xtea}
+\bibfield{author}{\bibinfo{person}{Antonio de~la Piedra}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Extended Tiny Encryption Algorithm (XTEA)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://opencores.org/projects/xteacore}}.
+\newblock
+
+
+\bibitem[Qin et~al\mbox{.}(2020)]%
+        {qin_formal_2020}
+\bibfield{author}{\bibinfo{person}{Maoyuan Qin}, \bibinfo{person}{Xinmu Wang},
+  \bibinfo{person}{Baolei Mao}, \bibinfo{person}{Dejun Mu}, {and}
+  \bibinfo{person}{Wei Hu}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{A formal model for proving hardware timing
+  properties and identifying timing channels}.
+\newblock \bibinfo{journal}{\emph{Integration}}  \bibinfo{volume}{72}
+  (\bibinfo{date}{May} \bibinfo{year}{2020}), \bibinfo{pages}{123--133}.
+\newblock
+\showISSN{01679260}
+\href{https://doi.org/10.1016/j.vlsi.2020.02.001}{doi:\nolinkurl{10.1016/j.vlsi.2020.02.001}}
+
+
+\bibitem[Research(2023a)]%
+        {riscvmini}
+\bibfield{author}{\bibinfo{person}{Berkeley~Architecture Research}.}
+  \bibinfo{year}{2023}\natexlab{a}.
+\newblock \bibinfo{title}{RiscvMini: Simple RISC-V 3-stage Pipeline in Chisel}.
+\newblock \bibinfo{howpublished}{\url
+  {https://github.com/ucb-bar/riscv-mini/tree/3473cfd8c0ebca6593d3c324209b0f5a7e582802}}.
+\newblock
+
+
+\bibitem[Research(2023b)]%
+        {sodor}
+\bibfield{author}{\bibinfo{person}{Berkeley~Architecture Research}.}
+  \bibinfo{year}{2023}\natexlab{b}.
+\newblock \bibinfo{title}{Sodor Processor Collection: Educational
+  Microarchitectures for Risc-V ISA}.
+\newblock \bibinfo{howpublished}{\url
+  {https://github.com/ucb-bar/riscv-sodor/tree/sodor-old}}.
+\newblock
+
+
+\bibitem[Salmani et~al\mbox{.}(2013)]%
+        {salmani_design_2013}
+\bibfield{author}{\bibinfo{person}{Hassan Salmani}, \bibinfo{person}{Mohammad
+  Tehranipoor}, {and} \bibinfo{person}{Ramesh Karri}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{On design vulnerability analysis and trust
+  benchmarks development}. In \bibinfo{booktitle}{\emph{2013 {IEEE} 31st
+  {International} {Conference} on {Computer} {Design} ({ICCD})}}.
+  \bibinfo{publisher}{IEEE}, \bibinfo{address}{Asheville, NC, USA},
+  \bibinfo{pages}{471--474}.
+\newblock
+\showISBNx{978-1-4799-2987-0}
+\href{https://doi.org/10.1109/ICCD.2013.6657085}{doi:\nolinkurl{10.1109/ICCD.2013.6657085}}
+
+
+\bibitem[Shakya et~al\mbox{.}(2017)]%
+        {shakya_benchmarking_2017}
+\bibfield{author}{\bibinfo{person}{Bicky Shakya}, \bibinfo{person}{Tony He},
+  \bibinfo{person}{Hassan Salmani}, \bibinfo{person}{Domenic Forte},
+  \bibinfo{person}{Swarup Bhunia}, {and} \bibinfo{person}{Mark Tehranipoor}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Benchmarking of {Hardware} {Trojans} and
+  {Maliciously} {Affected} {Circuits}}.
+\newblock \bibinfo{journal}{\emph{J Hardw Syst Secur}} \bibinfo{volume}{1},
+  \bibinfo{number}{1} (\bibinfo{date}{March} \bibinfo{year}{2017}),
+  \bibinfo{pages}{85--102}.
+\newblock
+\showISSN{2509-3428, 2509-3436}
+\href{https://doi.org/10.1007/s41635-017-0001-6}{doi:\nolinkurl{10.1007/s41635-017-0001-6}}
+
+
+\bibitem[Sui et~al\mbox{.}(2020)]%
+        {sui_recall_2020}
+\bibfield{author}{\bibinfo{person}{Li Sui}, \bibinfo{person}{Jens Dietrich},
+  \bibinfo{person}{Amjed Tahir}, {and} \bibinfo{person}{George Fourtounis}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{On the recall of static call graph construction in
+  practice}. In \bibinfo{booktitle}{\emph{Proceedings of the {ACM}/{IEEE} 42nd
+  {International} {Conference} on {Software} {Engineering}}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{Seoul South Korea},
+  \bibinfo{pages}{1049--1060}.
+\newblock
+\showISBNx{978-1-4503-7121-6}
+\href{https://doi.org/10.1145/3377811.3380441}{doi:\nolinkurl{10.1145/3377811.3380441}}
+
+
+\bibitem[Usselmann(2012)]%
+        {wishbone-arbiter}
+\bibfield{author}{\bibinfo{person}{Rudolf Usselmann}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{title}{Wishbone Round Robin Arbiter}.
+\newblock
+  \bibinfo{howpublished}{\url{https://opencores.org/projects/wb_conbus}}.
+\newblock
+
+
+\bibitem[Xu et~al\mbox{.}(2022)]%
+        {xu_towards_2022}
+\bibfield{author}{\bibinfo{person}{Yinan Xu}, \bibinfo{person}{Zihao Yu},
+  \bibinfo{person}{Dan Tang}, \bibinfo{person}{Guokai Chen},
+  \bibinfo{person}{Lu Chen}, \bibinfo{person}{Lingrui Gou},
+  \bibinfo{person}{Yue Jin}, \bibinfo{person}{Qianruo Li}, \bibinfo{person}{Xin
+  Li}, \bibinfo{person}{Zuojun Li}, \bibinfo{person}{Jiawei Lin},
+  \bibinfo{person}{Tong Liu}, \bibinfo{person}{Zhigang Liu},
+  \bibinfo{person}{Jiazhan Tan}, \bibinfo{person}{Huaqiang Wang},
+  \bibinfo{person}{Huizhe Wang}, \bibinfo{person}{Kaifan Wang},
+  \bibinfo{person}{Chuanqi Zhang}, \bibinfo{person}{Fawang Zhang},
+  \bibinfo{person}{Linjuan Zhang}, \bibinfo{person}{Zifei Zhang},
+  \bibinfo{person}{Yangyang Zhao}, \bibinfo{person}{Yaoyang Zhou},
+  \bibinfo{person}{Yike Zhou}, \bibinfo{person}{Jiangrui Zou},
+  \bibinfo{person}{Ye Cai}, \bibinfo{person}{Dandan Huan},
+  \bibinfo{person}{Zusong Li}, \bibinfo{person}{Jiye Zhao},
+  \bibinfo{person}{Zihao Chen}, \bibinfo{person}{Wei He},
+  \bibinfo{person}{Qiyuan Quan}, \bibinfo{person}{Xingwu Liu},
+  \bibinfo{person}{Sa Wang}, \bibinfo{person}{Kan Shi},
+  \bibinfo{person}{Ninghui Sun}, {and} \bibinfo{person}{Yungang Bao}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Towards {Developing} {High} {Performance}
+  {RISC}-{V} {Processors} {Using} {Agile} {Methodology}}. In
+  \bibinfo{booktitle}{\emph{2022 55th {IEEE}/{ACM} {International} {Symposium}
+  on {Microarchitecture} ({MICRO})}}. \bibinfo{publisher}{IEEE},
+  \bibinfo{address}{Chicago, IL, USA}, \bibinfo{pages}{1178--1199}.
+\newblock
+\showISBNx{978-1-66546-272-3}
+\href{https://doi.org/10.1109/MICRO56248.2022.00080}{doi:\nolinkurl{10.1109/MICRO56248.2022.00080}}
+
+
+\bibitem[Zhao et~al\mbox{.}(2022)]%
+        {zhao_constellation_2022}
+\bibfield{author}{\bibinfo{person}{Jerry Zhao}, \bibinfo{person}{Animesh
+  Agrawal}, \bibinfo{person}{Borivoje Nikolic}, {and} \bibinfo{person}{Krste
+  Asanovic}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Constellation: {An} {Open}-{Source} {SoC}-{Capable}
+  {NoC} {Generator}}. In \bibinfo{booktitle}{\emph{2022 15th {IEEE}/{ACM}
+  {International} {Workshop} on {Network} on {Chip} {Architectures}
+  ({NoCArc})}}. \bibinfo{publisher}{IEEE}, \bibinfo{address}{Chicago, IL, USA},
+  \bibinfo{pages}{1--7}.
+\newblock
+\showISBNx{978-1-66545-589-3}
+\href{https://doi.org/10.1109/NoCArc57472.2022.9911299}{doi:\nolinkurl{10.1109/NoCArc57472.2022.9911299}}
 
 
 \end{thebibliography}

@@ -1,34 +1,570 @@
+// ---------- HDL Analysis ----------
+
 @article{cui_chisa_2026,
-	title = {{ChiSA}: {Static} {Analysis} for {Lightweight} {Chisel} {Verification}},
-	volume = {10},
-	issn = {2475-1421},
-	shorttitle = {{ChiSA}},
-	url = {https://dl.acm.org/doi/10.1145/3776660},
-	doi = {10.1145/3776660},
-	language = {en},
-	number = {POPL},
-	urldate = {2026-03-05},
-	journal = {Proc. ACM Program. Lang.},
-	author = {Cui, Jiacai and Chen, Qinlin and Zhan, Zhongsheng and Tan, Tian and Li, Yue},
-	month = jan,
-	year = {2026},
-	pages = {507--539},
-	file = {Full Text PDF:/Users/cuijiacai/Zotero/storage/5C64PK4U/Cui et al. - 2026 - ChiSA Static Analysis for Lightweight Chisel Verification.pdf:application/pdf},
+    title        = {{ChiSA}: {Static} {Analysis} for {Lightweight} {Chisel} {Verification}},
+    shorttitle   = {{ChiSA}},
+    author       = {Cui, Jiacai and Chen, Qinlin and Zhan, Zhongsheng and Tan, Tian and Li, Yue},
+    year         = 2026,
+    month        = jan,
+    journal      = {Proc. ACM Program. Lang.},
+    volume       = 10,
+    number       = {POPL},
+    pages        = {507--539},
+    doi          = {10.1145/3776660},
+    issn         = {2475-1421},
+    url          = {https://dl.acm.org/doi/10.1145/3776660},
+    urldate      = {2026-03-05},
+    language     = {en}
 }
 
 @article{chen_exploiting_2026,
-	title = {Exploiting {Sophisticated} {Static} {Analysis} for {Verilog}},
-	volume = {10},
-	issn = {2475-1421},
-	url = {https://dl.acm.org/doi/10.1145/3808300},
-	doi = {10.1145/3808300},
-	language = {en},
-	number = {PLDI},
-	urldate = {2026-06-10},
-	journal = {Proc. ACM Program. Lang.},
-	author = {Chen, Qinlin and Zhang, Nairen and Wang, Jinpeng and Cui, Jiacai and Tan, Tian and Ma, Xiaoxing and Xu, Chang and Lu, Jian and Li, Yue},
-	month = jun,
-	year = {2026},
-	pages = {1327--1355},
-	file = {Full Text PDF:/Users/cuijiacai/Zotero/storage/3DIRFCZV/Chen et al. - 2026 - Exploiting Sophisticated Static Analysis for Verilog.pdf:application/pdf},
+    title        = {Exploiting {Sophisticated} {Static} {Analysis} for {Verilog}},
+    author       = {Chen, Qinlin and Zhang, Nairen and Wang, Jinpeng and Cui, Jiacai and Tan, Tian and Ma, Xiaoxing and Xu, Chang and Lu, Jian and Li, Yue},
+    year         = 2026,
+    month        = jun,
+    journal      = {Proc. ACM Program. Lang.},
+    volume       = 10,
+    number       = {PLDI},
+    pages        = {1327--1355},
+    doi          = {10.1145/3808300},
+    issn         = {2475-1421},
+    url          = {https://dl.acm.org/doi/10.1145/3808300},
+    urldate      = {2026-06-10},
+    language     = {en}
 }
+
+// ---------- Specifications ----------
+
+@inproceedings{bachrach_chisel_2012,
+    title        = {Chisel: constructing hardware in a {Scala} embedded language},
+    shorttitle   = {Chisel},
+    author       = {Bachrach, Jonathan and Vo, Huy and Richards, Brian and Lee, Yunsup and Waterman, Andrew and Avižienis, Rimas and Wawrzynek, John and Asanović, Krste},
+    year         = 2012,
+    month        = jun,
+    booktitle    = {Proceedings of the 49th {Annual} {Design} {Automation} {Conference}},
+    publisher    = {ACM},
+    address      = {San Francisco California},
+    pages        = {1216--1225},
+    doi          = {10.1145/2228360.2228584},
+    isbn         = {978-1-4503-1199-1},
+    url          = {https://dl.acm.org/doi/10.1145/2228360.2228584},
+    urldate      = {2024-03-23},
+    language     = {en},
+    keywords     = {CCF-A, DAC, Language}
+}
+
+@inproceedings{izraelevitz_reusability_2017,
+    title        = {Reusability is {FIRRTL} ground: {Hardware} construction languages, compiler frameworks, and transformations},
+    shorttitle   = {Reusability is {FIRRTL} ground},
+    author       = {Izraelevitz, Adam and Koenig, Jack and Li, Patrick and Lin, Richard and Wang, Angie and Magyar, Albert and Kim, Donggyu and Schmidt, Colin and Markley, Chick and Lawson, Jim and Bachrach, Jonathan},
+    year         = 2017,
+    month        = nov,
+    booktitle    = {2017 {IEEE}/{ACM} {International} {Conference} on {Computer}-{Aided} {Design} ({ICCAD})},
+    publisher    = {IEEE},
+    address      = {Irvine, CA},
+    pages        = {209--216},
+    doi          = {10.1109/ICCAD.2017.8203780},
+    isbn         = {978-1-5386-3093-8},
+    url          = {http://ieeexplore.ieee.org/document/8203780/},
+    urldate      = {2024-03-23},
+    keywords     = {CCF-B, ICCAD, Language}
+}
+
+@techreport{li_specification_2016,
+    title        = {Specification for the FIRRTL Language},
+    author       = {Li, Patrick S. and Izraelevitz, Adam M. and Bachrach, Jonathan},
+    year         = 2016,
+    month        = {Feb},
+    number       = {UCB/EECS-2016-9},
+    url          = {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-9.html}
+}
+
+// ---------- Clients ----------
+
+// --- Bug ---
+
+@inproceedings{ma_debugging_2022,
+    title        = {Debugging in the brave new world of reconfigurable hardware},
+    author       = {Ma, Jiacheng and Zuo, Gefei and Loughlin, Kevin and Zhang, Haoyang and Quinn, Andrew and Kasikci, Baris},
+    year         = 2022,
+    month        = feb,
+    booktitle    = {Proceedings of the 27th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}},
+    publisher    = {ACM},
+    address      = {Lausanne Switzerland},
+    pages        = {946--962},
+    doi          = {10.1145/3503222.3507701},
+    isbn         = {978-1-4503-9205-1},
+    url          = {https://dl.acm.org/doi/10.1145/3503222.3507701},
+    urldate      = {2024-05-23},
+    language     = {en},
+    keywords     = {CCF-A, ASPLOS}
+}
+
+@misc{ma_debugging_2022_artifact,
+    title = {Debugging in the brave new world of reconfigurable hardware (Bugbase Artifact)},
+    howpublished = "\url{https://github.com/efeslab/hardware-bugbase.git}",
+    author = {Ma, Jiacheng and Zuo, Gefei and Loughlin, Kevin and Zhang, Haoyang and Quinn, Andrew and Kasikci, Baris},
+    year = {2022},
+}
+
+@misc{sdspi,
+    title        = {SD-Card Controller},
+    author       = {Gisselquist, Dan},
+    year         = 2019,
+    howpublished = {\url{https://github.com/ZipCPU/sdspi/commit/e3d46ab24f79b62544fb11a49de77504bbdab83f}}
+}
+
+@misc{axi-stream-fifo,
+    title        = {AXI Stream FIFO},
+    author       = {Forencich, Alex},
+    year         = 2015,
+    howpublished = {\url{https://github.com/alexforencich/verilog-axis/commit/382226ad5966198862fb676c7a5810067c2c6a19}}
+}
+
+@misc{cva6-f2i-cast,
+    title        = {CVA6 CVFPU F2I Cast},
+    author       = {Mach, Stefan},
+    year         = 2019,
+    howpublished = {\url{https://github.com/alexforencich/verilog-axis/commit/382226ad5966198862fb676c7a5810067c2c6a19}}
+}
+
+@misc{ad-pn-mon,
+    title        = {ADI PN Monitor},
+    author       = {Nagy, Laszlo},
+    year         = 2019,
+    howpublished = {\url{https://github.com/analogdevicesinc/hdl/commit/8476993c1bc9ab5977a3b776e69cd393ea342fc7}}
+}
+
+@misc{axis-frame-len,
+    title        = {Corundum AXI Frame Length},
+    author       = {Forencich, Alex},
+    year         = 2019,
+    howpublished = {\url{https://github.com/corundum/corundum/commit/0b2066abe3d8983a120cb8afe598c2710f2e5be6}}
+}
+
+@misc{data-offload-fsm,
+    title        = {ADI Data Offload FSM},
+    author       = {Nagy, Mihaita and Winter, David},
+    year         = 2019,
+    howpublished = {\url{https://github.com/analogdevicesinc/hdl/commit/2b55c7453b8d8e44a7e7724ea4b26962abb7fe64}}
+}
+
+// --- Security ---
+
+@article{hu_hardware_2022,
+    title        = {Hardware {Information} {Flow} {Tracking}},
+    author       = {Hu, Wei and Ardeshiricham, Armaiti and Kastner, Ryan},
+    year         = 2022,
+    month        = may,
+    journal      = {ACM Comput. Surv.},
+    volume       = 54,
+    number       = 4,
+    pages        = {1--39},
+    doi          = {10.1145/3447867},
+    issn         = {0360-0300, 1557-7341},
+    url          = {https://dl.acm.org/doi/10.1145/3447867},
+    urldate      = {2025-05-19},
+    language     = {en}
+}
+
+@inproceedings{ardeshiricham_clepsydra_2017,
+    title        = {Clepsydra: {Modeling} timing flows in hardware designs},
+    shorttitle   = {Clepsydra},
+    author       = {Ardeshiricham, Armaiti and Hu, Wei and Kastner, Ryan},
+    year         = 2017,
+    month        = nov,
+    booktitle    = {2017 {IEEE}/{ACM} {International} {Conference} on {Computer}-{Aided} {Design} ({ICCAD})},
+    publisher    = {IEEE},
+    address      = {Irvine, CA},
+    pages        = {147--154},
+    doi          = {10.1109/ICCAD.2017.8203772},
+    isbn         = {978-1-5386-3093-8},
+    url          = {http://ieeexplore.ieee.org/document/8203772/},
+    urldate      = {2026-04-21},
+    language     = {en-US}
+}
+
+@article{qin_formal_2020,
+    title        = {A formal model for proving hardware timing properties and identifying timing channels},
+    author       = {Qin, Maoyuan and Wang, Xinmu and Mao, Baolei and Mu, Dejun and Hu, Wei},
+    year         = 2020,
+    month        = may,
+    journal      = {Integration},
+    volume       = 72,
+    pages        = {123--133},
+    doi          = {10.1016/j.vlsi.2020.02.001},
+    issn         = {01679260},
+    url          = {https://linkinghub.elsevier.com/retrieve/pii/S0167926019306248},
+    urldate      = {2026-04-24},
+    language     = {en}
+}
+
+@inproceedings{alatoun_efficient_2022,
+    address = {Irvine CA USA},
+    title = {Efficient {Method} for {Timing}-based {Information} {Flow} {Verification} in {Hardware} {Designs}},
+    isbn = {978-1-4503-9322-5},
+    url = {https://dl.acm.org/doi/10.1145/3526241.3530363},
+    doi = {10.1145/3526241.3530363},
+    language = {en},
+    urldate = {2026-03-26},
+    booktitle = {Proceedings of the {Great} {Lakes} {Symposium} on {VLSI} 2022},
+    publisher = {ACM},
+    author = {Alatoun, Khitam M. and Vemuri, Ranga},
+    month = jun,
+    year = {2022},
+    pages = {159--163},
+    file = {PDF:/Users/cuijiacai/Zotero/storage/Q7PH9GY8/Alatoun and Vemuri - 2022 - Efficient Method for Timing-based Information Flow Verification in Hardware Designs.pdf:application/pdf},
+}
+
+@inproceedings{salmani_design_2013,
+    address = {Asheville, NC, USA},
+    title = {On design vulnerability analysis and trust benchmarks development},
+    isbn = {978-1-4799-2987-0},
+    url = {http://ieeexplore.ieee.org/document/6657085/},
+    doi = {10.1109/ICCD.2013.6657085},
+    urldate = {2025-01-14},
+    booktitle = {2013 {IEEE} 31st {International} {Conference} on {Computer} {Design} ({ICCD})},
+    publisher = {IEEE},
+    author = {Salmani, Hassan and Tehranipoor, Mohammad and Karri, Ramesh},
+    month = oct,
+    year = {2013},
+    pages = {471--474},
+    file = {Full Text:/Users/cuijiacai/Zotero/storage/HUR6IIU9/Salmani et al. - 2013 - On design vulnerability analysis and trust benchma.pdf:application/pdf},
+}
+
+@article{shakya_benchmarking_2017,
+    title = {Benchmarking of {Hardware} {Trojans} and {Maliciously} {Affected} {Circuits}},
+    volume = {1},
+    issn = {2509-3428, 2509-3436},
+    url = {http://link.springer.com/10.1007/s41635-017-0001-6},
+    doi = {10.1007/s41635-017-0001-6},
+    language = {en},
+    number = {1},
+    urldate = {2025-01-14},
+    journal = {J Hardw Syst Secur},
+    author = {Shakya, Bicky and He, Tony and Salmani, Hassan and Forte, Domenic and Bhunia, Swarup and Tehranipoor, Mark},
+    month = mar,
+    year = {2017},
+    pages = {85--102},
+    file = {Full Text:/Users/cuijiacai/Zotero/storage/AEP8IGMW/Shakya et al. - 2017 - Benchmarking of Hardware Trojans and Maliciously A.pdf:application/pdf},
+}
+
+@misc{opencores,
+    title        = {Open Cores},
+    year         = {2026},
+    howpublished = {\url{https://opencores.org/}}
+}
+
+@misc{aes128,
+    title        = {AES-T100},
+    author       = {Hsing, Homer},
+    year         = 2012,
+    howpublished = {\url{https://trust-hub.org/downloads/resource/benchmarks/AES/AES-T100.zip}}
+}
+
+@misc{rsa-cypher,
+    title        = {BasicRSA-T400 (The RSA Cypher)},
+    author       = {McQueen, Steven R.},
+    year         = 2001,
+    howpublished = {\url{https://trust-hub.org/downloads/resource/benchmarks/BASIC-RSA/BasicRSA-T400.rar}}
+}
+
+@misc{rsa-modmult,
+    title        = {BasicRSA-T400 (The Modular Multiplication Component)},
+    author       = {McQueen, Steven R.},
+    year         = 2001,
+    howpublished = {\url{https://trust-hub.org/downloads/resource/benchmarks/BASIC-RSA/BasicRSA-T400.rar}}
+}
+
+@misc{sha1,
+    title        = {Secure Hash Algorithm (SHA-160)},
+    author       = {marsgod@opencores.org},
+    year         = 2018,
+    howpublished = {\url{https://opencores.org/projects/sha_core}}
+}
+
+@misc{xtea,
+    title        = {Extended Tiny Encryption Algorithm (XTEA)},
+    author       = {Piedra, Antonio de la},
+    year         = 2017,
+    howpublished = {\url{https://opencores.org/projects/xteacore}}
+}
+
+@misc{wishbone-arbiter,
+    title        = {Wishbone Round Robin Arbiter},
+    author       = {Usselmann, Rudolf},
+    year         = 2012,
+    howpublished = {\url{https://opencores.org/projects/wb_conbus}}
+}
+
+@misc{montgomery-modmult,
+    title        = {Montgomery Modular Multiplier and Exponentiator},
+    author       = {Gajewski, Krzysztof},
+    year         = 2019,
+    howpublished = {\url{https://opencores.org/projects/mod_mult_exp}}
+}
+
+@misc{fixed-point-math,
+    title        = {Fixed Point Math Library for Verilog},
+    author       = {Burke, Tom},
+    year         = 2019,
+    howpublished = {\url{https://opencores.org/projects/verilog_fixed_point_math_library}}
+}
+
+// --- Understanding ---
+
+@article{nigam_modular_2023,
+    title        = {Modular {Hardware} {Design} with {Timeline} {Types}},
+    author       = {Nigam, Rachit and Azevedo De Amorim, Pedro Henrique and Sampson, Adrian},
+    year         = 2023,
+    month        = jun,
+    journal      = {Proc. ACM Program. Lang.},
+    volume       = 7,
+    number       = {PLDI},
+    pages        = {343--367},
+    doi          = {10.1145/3591234},
+    issn         = {2475-1421},
+    url          = {https://dl.acm.org/doi/10.1145/3591234},
+    urldate      = {2025-10-09},
+    language     = {en},
+    keywords     = {PLDI, Type System, Modularity}
+}
+
+// ---------- Formalism ----------
+
+@book{rosales_numerical_2009,
+    title        = {Numerical {Semigroups}},
+    author       = {Rosales, J.C. and García-Sánchez, P. A.},
+    year         = 2009,
+    publisher    = {Springer New York},
+    address      = {New York, NY},
+    series       = {Developments in {Mathematics}},
+    volume       = 20,
+    doi          = {10.1007/978-1-4419-0160-6},
+    isbn         = {978-1-4419-0159-0 978-1-4419-0160-6},
+    url          = {https://link.springer.com/10.1007/978-1-4419-0160-6},
+    urldate      = {2026-08-15},
+    copyright    = {https://www.springernature.com/gp/researchers/text-and-data-mining},
+    language     = {en}
+}
+
+// ---------- Evaluation ----------
+
+// ------ Realworld Designs
+
+@techreport{asanovic_rocket_2016,
+    title        = {The {Rocket} {Chip} {Generator}},
+    author       = {Asanović, Krste and Avizienis, Rimas and Bachrach, Jonathan and Beamer, Scott and Biancolin, David and Celio, Christopher and Cook, Henry and Dabbelt, Daniel and Hauser, John and Izraelevitz, Adam and Karandikar, Sagar and Keller, Ben and Kim, Donggyu and Koenig, John and Lee, Yunsup and Love, Eric and Maas, Martin and Magyar, Albert and Mao, Howard and Moreto, Miquel and Ou, Albert and Patterson, David A. and Richards, Brian and Schmidt, Colin and Twigg, Stephen and Vo, Huy and Waterman, Andrew},
+    year         = 2016,
+    month        = {apr},
+    number       = {UCB/EECS-2016-17},
+    url          = {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-17.html}
+}
+
+@techreport{celio_berkeley_2015,
+    title        = {The {Berkeley} {Out}-of-{Order} {Machine} ({BOOM}): {An} {Industry}-{Competitive}, {Synthesizable}, {Parameterized} {RISC}-{V} {Processor}},
+    author       = {Celio, Christopher and Patterson, David A. and Asanović, Krste},
+    year         = 2015,
+    month        = {jun},
+    number       = {UCB/EECS-2015-167},
+    url          = {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-167.html}
+}
+
+@misc{quasar,
+    title        = {Quasar 2.0: Chisel equivalent of SweRV-EL2},
+    year         = 2023,
+    howpublished = {\url {https://github.com/Lampro-Mellon/Quasar/tree/2bc0985afd670d0c9b1b6983b53c3c2b340fcb5a}}
+}
+
+@misc{sodor,
+    title        = {Sodor Processor Collection: Educational Microarchitectures for Risc-V ISA},
+    author       = {Berkeley Architecture Research},
+    year         = 2023,
+    howpublished = {\url {https://github.com/ucb-bar/riscv-sodor/tree/sodor-old}}
+}
+
+@misc{riscvmini,
+    title        = {RiscvMini: Simple RISC-V 3-stage Pipeline in Chisel},
+    author       = {Berkeley Architecture Research},
+    year         = 2023,
+    howpublished = {\url {https://github.com/ucb-bar/riscv-mini/tree/3473cfd8c0ebca6593d3c324209b0f5a7e582802}}
+}
+
+@inproceedings{zhao_constellation_2022,
+    title        = {Constellation: {An} {Open}-{Source} {SoC}-{Capable} {NoC} {Generator}},
+    shorttitle   = {Constellation},
+    author       = {Zhao, Jerry and Agrawal, Animesh and Nikolic, Borivoje and Asanovic, Krste},
+    year         = 2022,
+    month        = {oct},
+    booktitle    = {2022 15th {IEEE}/{ACM} {International} {Workshop} on {Network} on {Chip} {Architectures} ({NoCArc})},
+    publisher    = {IEEE},
+    address      = {Chicago, IL, USA},
+    pages        = {1--7},
+    doi          = {10.1109/NoCArc57472.2022.9911299},
+    isbn         = {978-1-66545-589-3},
+    url          = {https://ieeexplore.ieee.org/document/9911299/},
+    urldate      = {2024-11-13},
+    copyright    = {https://doi.org/10.15223/policy-029}
+}
+
+@inproceedings{genc_gemmini_2021,
+    title        = {Gemmini: {Enabling} {Systematic} {Deep}-{Learning} {Architecture} {Evaluation} via {Full}-{Stack} {Integration}},
+    shorttitle   = {Gemmini},
+    author       = {Genc, Hasan and Kim, Seah and Amid, Alon and Haj-Ali, Ameer and Iyer, Vighnesh and Prakash, Pranav and Zhao, Jerry and Grubb, Daniel and Liew, Harrison and Mao, Howard and Ou, Albert and Schmidt, Colin and Steffl, Samuel and Wright, John and Stoica, Ion and Ragan-Kelley, Jonathan and Asanovic, Krste and Nikolic, Borivoje and Shao, Yakun Sophia},
+    year         = 2021,
+    month        = {dec},
+    booktitle    = {2021 58th {ACM}/{IEEE} {Design} {Automation} {Conference} ({DAC})},
+    publisher    = {IEEE},
+    address      = {San Francisco, CA, USA},
+    pages        = {769--774},
+    doi          = {10.1109/DAC18074.2021.9586216},
+    isbn         = {978-1-66543-274-0},
+    url          = {https://ieeexplore.ieee.org/document/9586216/},
+    urldate      = {2024-11-13},
+    copyright    = {https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html}
+}
+
+@techreport{lee_hwacha_2015,
+    title        = {The {Hwacha} {Microarchitecture} {Manual}, {Version} 3.8.1},
+    author       = {Lee, Yunsup and Ou, Albert and Schmidt, Colin and Karandikar, Sagar and Mao, Howard and Asanović, Krste},
+    year         = 2015,
+    month        = {dec},
+    number       = {UCB/EECS-2015-263},
+    url          = {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-263.html}
+}
+
+@inproceedings{xu_towards_2022,
+    title        = {Towards {Developing} {High} {Performance} {RISC}-{V} {Processors} {Using} {Agile} {Methodology}},
+    author       = {Xu, Yinan and Yu, Zihao and Tang, Dan and Chen, Guokai and Chen, Lu and Gou, Lingrui and Jin, Yue and Li, Qianruo and Li, Xin and Li, Zuojun and Lin, Jiawei and Liu, Tong and Liu, Zhigang and Tan, Jiazhan and Wang, Huaqiang and Wang, Huizhe and Wang, Kaifan and Zhang, Chuanqi and Zhang, Fawang and Zhang, Linjuan and Zhang, Zifei and Zhao, Yangyang and Zhou, Yaoyang and Zhou, Yike and Zou, Jiangrui and Cai, Ye and Huan, Dandan and Li, Zusong and Zhao, Jiye and Chen, Zihao and He, Wei and Quan, Qiyuan and Liu, Xingwu and Wang, Sa and Shi, Kan and Sun, Ninghui and Bao, Yungang},
+    year         = 2022,
+    month        = {oct},
+    booktitle    = {2022 55th {IEEE}/{ACM} {International} {Symposium} on {Microarchitecture} ({MICRO})},
+    publisher    = {IEEE},
+    address      = {Chicago, IL, USA},
+    pages        = {1178--1199},
+    doi          = {10.1109/MICRO56248.2022.00080},
+    isbn         = {978-1-66546-272-3},
+    url          = {https://ieeexplore.ieee.org/document/9923860/},
+    urldate      = {2024-03-23}
+}
+
+// ------ Measures
+
+
+@article{park_survey_2022,
+    title        = {A {Survey} of {Parametric} {Static} {Analysis}},
+    author       = {Park, Jihyeok and Lee, Hongki and Ryu, Sukyoung},
+    year         = 2022,
+    month        = sep,
+    journal      = {ACM Comput. Surv.},
+    volume       = 54,
+    number       = 7,
+    pages        = {1--37},
+    doi          = {10.1145/3464457},
+    issn         = {0360-0300, 1557-7341},
+    url          = {https://dl.acm.org/doi/10.1145/3464457},
+    urldate      = {2026-08-31},
+    language     = {en}
+}
+
+@techreport{delaitre_sate_2018,
+    title        = {{SATE} {V} report: ten years of static analysis tool expositions},
+    shorttitle   = {{SATE} {V} report},
+    author       = {Delaitre, Aurelien and Stivalet, Bertrand and Black, Paul E and Okun, Vadim and Ribeiro, Athos and Cohen, Terry S},
+    year         = 2018,
+    month        = oct,
+    address      = {Gaithersburg, MD},
+    number       = {NIST SP 500-326},
+    pages        = {NIST SP 500--326},
+    doi          = {10.6028/NIST.SP.500-326},
+    url          = {https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.500-326.pdf},
+    urldate      = {2026-08-31},
+    institution  = {National Institute of Standards and Technology}
+}
+
+@inproceedings{helm_total_2024,
+    title        = {Total {Recall}? {How} {Good} {Are} {Static} {Call} {Graphs} {Really}?},
+    shorttitle   = {Total {Recall}?},
+    author       = {Helm, Dominik and Keidel, Sven and Kampkötter, Anemone and Düsing, Johannes and Roth, Tobias and Hermann, Ben and Mezini, Mira},
+    year         = 2024,
+    month        = sep,
+    booktitle    = {Proceedings of the 33rd {ACM} {SIGSOFT} {International} {Symposium} on {Software} {Testing} and {Analysis}},
+    publisher    = {ACM},
+    address      = {Vienna Austria},
+    pages        = {112--123},
+    doi          = {10.1145/3650212.3652114},
+    isbn         = {979-8-4007-0612-7},
+    url          = {https://dl.acm.org/doi/10.1145/3650212.3652114},
+    urldate      = {2026-08-31},
+    language     = {en}
+}
+
+@inproceedings{sui_recall_2020,
+    title        = {On the recall of static call graph construction in practice},
+    author       = {Sui, Li and Dietrich, Jens and Tahir, Amjed and Fourtounis, George},
+    year         = 2020,
+    month        = jun,
+    booktitle    = {Proceedings of the {ACM}/{IEEE} 42nd {International} {Conference} on {Software} {Engineering}},
+    publisher    = {ACM},
+    address      = {Seoul South Korea},
+    pages        = {1049--1060},
+    doi          = {10.1145/3377811.3380441},
+    isbn         = {978-1-4503-7121-6},
+    url          = {https://dl.acm.org/doi/10.1145/3377811.3380441},
+    urldate      = {2026-08-31},
+    language     = {en}
+}
+
+@article{liang_pointer_2025,
+    title        = {Pointer {Analysis} for {Database}-{Backed} {Applications}},
+    author       = {Liang, Yufei and Zhang, Teng and Li, Ganlin and Tan, Tian and Xu, Chang and Cao, Chun and Ma, Xiaoxing and Li, Yue},
+    year         = 2025,
+    month        = jun,
+    journal      = {Proc. ACM Program. Lang.},
+    volume       = 9,
+    number       = {PLDI},
+    pages        = {1417--1441},
+    doi          = {10.1145/3729307},
+    issn         = {2475-1421},
+    url          = {https://dl.acm.org/doi/10.1145/3729307},
+    urldate      = {2026-08-31},
+    language     = {en}
+}
+
+// ------ Fundamental
+
+@inproceedings{chong_clock_2021,
+    address = {Sanya, China},
+    title = {Clock {Domain} {Crossing} {Verification} {Challenges}},
+    copyright = {https://doi.org/10.15223/policy-029},
+    isbn = {978-1-6654-3757-8},
+    url = {https://ieeexplore.ieee.org/document/9742085/},
+    doi = {10.1109/CECIT53797.2021.00075},
+    urldate = {2026-09-01},
+    booktitle = {2021 2nd {International} {Conference} on {Electronics}, {Communications} and {Information} {Technology} ({CECIT})},
+    publisher = {IEEE},
+    author = {Chong, Ang Boon},
+    month = dec,
+    year = {2021},
+    pages = {383--387},
+}
+
+// ------ Client
+
+@inproceedings{bruant_systemverilog_2020,
+    address = {Hamburg, Germany},
+    title = {({System}){Verilog} to {Chisel} {Translation} for {Faster} {Hardware} {Design}},
+    isbn = {978-1-7281-8466-1},
+    url = {https://ieeexplore.ieee.org/document/9244852/},
+    doi = {10.1109/RSP51120.2020.9244852},
+    urldate = {2024-03-23},
+    booktitle = {2020 {International} {Workshop} on {Rapid} {System} {Prototyping} ({RSP})},
+    publisher = {IEEE},
+    author = {Bruant, Jean and Horrein, Pierre-Henri and Muller, Olivier and Groleat, Tristan and Petrot, Frederic},
+    month = sep,
+    year = {2020},
+    keywords = {CCF-N, RSP, Standalone, Usability},
+    pages = {1--7},
+    file = {Submitted Version:/Users/cuijiacai/Zotero/storage/ATUCXCR2/Bruant et al. - 2020 - (System)Verilog to Chisel Translation for Faster H.pdf:application/pdf},
+}
+

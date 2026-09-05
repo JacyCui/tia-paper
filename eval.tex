@@ -1,0 +1,22 @@
+\section{Evaluation}
+
+To evaluate the effectiveness and potential of \emph{temporal influence analysis} (\tia), we address the following research questions:
+\begin{enumerate}[label=\textbf{RQ\arabic*.}, leftmargin=*, align=left]
+    \item How does \tia itself perform on real-world Chisel designs in terms of its \emph{fundamental} capabilities, including soundness, precision, and efficiency?
+    \item Does \tia have the potential to support \emph{diverse} hardware analysis clients?
+    \begin{enumerate}[label=\textbf{RQ2-\arabic*.}, leftmargin=1ex, align=left]
+        \item \emph{Hardware Bug Detection.}
+        Can \tia support detecting signal asynchrony bugs?
+        \item \emph{Hardware Security Analysis.}
+        Can \tia support identifying timing-flow information leaks?
+        \item \emph{Hardware Design Understanding.}
+        Can \tia support understanding timeline interfaces?
+    \end{enumerate}
+\end{enumerate}
+We implement \tia and its client analyses with 1.4K lines of Java code on top of ChiSA~\cite{cui_chisa_2026}, a state-of-the-art static analyzer for Chisel that provides reusable analysis infrastructure and facilitates the development of our analyses.
+We also incorporate \texttt{sv2chisel}~\cite{bruant_systemverilog_2020}, a (System)Verilog-to-Chisel translator, as a front-end to enable evaluation on Verilog/SystemVerilog designs with ground truth about bugs, security, and understanding established by prior hardware literature, since there are no publicly available Chisel benchmarks providing such domain-specific ground truth.
+All experiments were conducted on an Intel i9-14900K 3.6\,GHz machine with a 64\,GB JVM heap limit.
+
+\input{eval-fundamental}
+\input{eval-clients}
+

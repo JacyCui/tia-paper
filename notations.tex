@@ -1,0 +1,116 @@
+% ---------- Domains ----------
+
+\newcommand{\ports}{\mathbb{P}}
+\newcommand{\nats}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\objects}{\mathbb{O}}
+\newcommand{\variables}{\mathbb{V}}
+\newcommand{\memories}{\mathbb{M}}
+\newcommand{\locations}{\mathbb{L}}
+\newcommand{\expressions}{\mathbb{E}}
+\newcommand{\absT}{\mathcal{T}}
+
+\newcommand{\powerset}{\mathcal{P}}
+
+% ---------- Notations ----------
+\newcommand{\Use}{\mathsf{Use}}
+
+% ---------- Syntax ----------
+\newcommand{\sCircuit}{\mathbf{Circuit}}
+\newcommand{\sConnect}{\mathbf{Connect}}
+\newcommand{\sTrace}{\mathbf{Trace}}
+\newcommand{\sEvent}{\mathbf{Event}}
+\newcommand{\vpoke}{\mathtt{poke\ }}
+
+% ---------- Semantics ----------
+\DeclareRobustCommand{\semantics}[1]{\llbracket #1 \rrbracket}
+\newcommand{\rTPoke}{\textsc{T-Poke}}
+\newcommand{\rTWire}{\textsc{T-Wire}}
+\newcommand{\rTReg}{\textsc{T-Reg}}
+\newcommand{\rTMemWrite}{\textsc{T-MemWrite}}
+\newcommand{\rTMemRead}{\textsc{T-MemRead}}
+
+\newcommand{\sen}{\mathit{en}}
+\newcommand{\ssin}{\mathit{in}}
+\newcommand{\ssout}{\mathit{out}}
+\newcommand{\vmux}{\mathtt{mux}}
+\newcommand{\vop}{\mathtt{ op }}
+
+% ---------- Analysis ----------
+
+\newcommand{\rTiaPort}{\textsc{Tia-Port}}
+\newcommand{\rTiaPropa}{\textsc{Tia-Propagate}}
+\newcommand{\rTiaWire}{\textsc{Tia-Wire}}
+\newcommand{\rTiaReg}{\textsc{Tia-Reg}}
+\newcommand{\rTiaMemWrite}{\textsc{Tia-MemWrite}}
+\newcommand{\rTiaMemRead}{\textsc{Tia-MemRead}}
+
+% ---------- Widening ----------
+\newcommand{\widening}{\textsc{TiaWidening}\xspace}
+
+% --------- Context-Sensitivity ----------
+
+\newcommand{\instances}{\mathbb{I}}
+\newcommand{\freeports}{\mathbb{F}}
+\newcommand{\contexts}{\mathbb{C}}
+
+\newcommand{\cstia}{\textsc{CSTia}\xspace}
+
+\newcommand{\rCSTiaFreePort}{\textsc{CSTia-FreePort}}
+\newcommand{\rCSTiaPropa}{\textsc{CSTia-Propagate}}
+\newcommand{\rCSTiaWire}{\textsc{CSTia-Wire}}
+\newcommand{\rCSTiaReg}{\textsc{CSTia-Reg}}
+\newcommand{\rCSTiaPortStore}{\textsc{CSTia-PortStore}}
+\newcommand{\rCSTiaPortLoad}{\textsc{CSTia-PortLoad}}
+\newcommand{\rCSTiaMemWrite}{\textsc{CSTia-MemWrite}}
+\newcommand{\rCSTiaMemRead}{\textsc{CSTia-MemRead}}
+
+\newcommand{\concat}{+\!\!\!+}
+
+% ---------- Chisel ----------
+
+\newcommand{\lstbg}[3][0pt]{{\fboxsep#1\colorbox{#2}{\strut #3}}}
+
+\lstdefinelanguage{chisel}{
+    morekeywords=[1]{val, class, extends},
+    morekeywords=[2]{UInt, SInt, Bool},
+    morekeywords=[3]{when, otherwise, RegNext, Reg, Wire, Input, Output, Module},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morecomment=[f][\lstbg{red!10}]{-\ },
+    morecomment=[f][\lstbg{green!10}]{+\ },
+    morestring=[b]",
+}
+
+\lstdefinestyle{chisel-style}{
+    language=chisel,
+    keepspaces=true,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=[1]\color{blue!80!black},
+    keywordstyle=[2]\color{teal},
+    keywordstyle=[3]\color{red!75!black},
+    commentstyle=\color{gray!120},
+    stringstyle=\color{violet},
+    showstringspaces=false,
+    breaklines=true,
+    columns=fullflexible,
+    %frame=single,
+    %framesep=4pt,
+    %framerule=0.5pt,
+    rulecolor=\color{gray!60},
+    numbers=left,
+    numberstyle=\footnotesize\color{gray},
+    numbersep=6pt,
+    xleftmargin=2pt,
+    escapeinside={(*}{*)},
+}
+
+\newcommand{\textcodeblue}[1]{\textcolor{blue!80!black}{#1}}
+\newcommand{\textcodeteal}[1]{\textcolor{teal}{#1}}
+\newcommand{\textcodered}[1]{\textcolor{red!75!black}{#1}}
+
+\lstnewenvironment{chisel}[1][]{
+    \lstset{style=chisel-style, #1}
+}{}
+
