@@ -1,18 +1,56 @@
 \section{Introduction}
 
-Recent research~\cite{cui_chisa_2026,chen_exploiting_2026} has demonstrated the potential of static analysis for lightweight hardware bug detection, security analysis, and design understanding.
-One fundamental aspect that distinguishes hardware design from software programming is the explicit notion of temporal behavior with respect to clock cycles.
-Many hardware bugs and vulnerabilities stem from developers' misunderstanding or incorrect implementation of expected temporal behavior.
-However, existing research on hardware static analysis has not explored how to detect such temporal bugs and vulnerabilities or aid the understanding of hardware temporal behavior.
+Static analysis is widely recognized as an effective and lightweight technique for enhancing software quality, with successful applications in bug detection~\cite{dura_javadl_2021,le_finding_2022,li_enhancing_2024,cai_canary_2021,chandra_snugglebug_2009}, security analysis~\cite{arzt_flowdroid_2014,ferreira_efficient_2024,liang_pointer_2025,lipp_empirical_2022}, and program understanding~\cite{sridharan_thin_2007,li_program_2016}.
+Recent research~\cite{cui_chisa_2026,chen_exploiting_2026} on applying static analysis to hardware description languages (HDLs)~\cite{bachrach_chisel_2012,ieee_verilog,ieee_systemverilog} has also demonstrated its potential for improving hardware quality in these application domains.
 
-To address this gap, we present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel---the most popular modern hardware description language (HDL).
-\tia answers a fundamental question about hardware temporal behavior: after which cycles can each input to a circuit influence each circuit location?
-We formally define this \emph{temporal influence information} using trace semantics and prove that \tia soundly captures it.
-To demonstrate \tia's potential as a foundation for diverse hardware analysis clients concerning temporal behavior, we develop three client analyses on top of it: detecting signal asynchrony bugs, identifying timing-flow information leaks, and understanding timeline interfaces.
+One fundamental aspect that distinguishes hardware design from software programming is the explicit notion of temporal behavior with respect to clock cycles.
+When writing HDL code, hardware designers often need to reason about how signals evolve across clock cycles, such as by mentally tracing their waveforms~\cite{vcd-waveform}, and ensure specific temporal relationships between signals, such as making one signal available a particular number of clock cycles before or after another~\cite{temporal-relationship}.
+However, reasoning about such temporal behavior of hardware designs remains unexplored in existing research on hardware static analysis~\cite{cui_chisa_2026,chen_exploiting_2026}, which has primarily focused on developing static analysis infrastructures for popular HDLs~\cite{bachrach_chisel_2012,ieee_verilog,ieee_systemverilog} to facilitate the development of new hardware static analyses.
+
+To address this research gap, we present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel~\cite{bachrach_chisel_2012}---the most popular \emph{modern} hardware description language (HDL).
+\tia aims to answer a fundamental question about hardware temporal behavior:
+\begin{quote}
+    \textit{After which clock cycles can each input to a circuit ``influence'' each circuit location?}
+\end{quote}
+We formulate this question as a static analysis problem by introducing a \emph{temporal influence semantics} that formally defines the dynamic ground truth for this question, and prove the soundness of \tia in statically approximating it.
+Because a hardware circuit can execute for an unbounded number of clock cycles~\cite{cui_chisa_2026}, an input may influence a circuit location at infinitely many clock cycles.
+To ensure that the analysis converges in the presence of such unbounded temporal influences, we introduce a widening operation, \widening, and prove that it preserves the soundness of \tia while ensuring its convergence.
+We further prove a property that provides insight into the impact of \widening on the precision of \tia.
+
+Beyond theoretical exploration, to demonstrate that the fundamental temporal information revealed by \tia has the practical potential to support diverse hardware analysis clients, we develop three client analyses on top of \tia:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{Signal Asynchrony Analysis (for Hardware Bug Detection).}
+    A signal asynchrony bug occurs when two hardware signals that are intended to be used together are not updated synchronously.
+    This client aims to detect signal asynchrony bugs and is inspired by a survey of hardware bugs~\cite{ma_debugging_2022}.
+
+    \item \emph{Timing-flow Analysis (for Hardware Security Analysis).}
+    A timing flow is a form of implicit information flow in which sensitive information affects the timing of public hardware behavior and may thereby leak information.
+    This client aims to identify timing flows and is inspired by a survey of hardware information-flow tracking~\cite{hu_hardware_2022}.
+
+    \item \emph{Timeline Interface Analysis (for Hardware Design Understanding).}
+    A timeline interface assigns each input or output of a hardware module a timeline interval that specifies the interval of clock cycles during which the corresponding signal is required or available.
+    This client aims to infer timeline interfaces to help hardware designers understand how to correctly use a module, inspired by the timeline type system~\cite{nigam_modular_2023}.
+\end{enumerate}
+All three clients leverage \tia's fundamental capabilities, including soundness, precision, and efficiency, while requiring only lightweight client-specific reasoning over the general-purpose temporal influence information computed by \tia.
+This design demonstrates \tia's potential to serve as a foundation for diverse hardware analysis clients.
 
 Our evaluation of \tia focuses on two aspects:
-(1) For \tia itself, we demonstrate that it efficiently analyzes 9 popular real-world Chisel projects, averaging 2.2K GitHub stars and totaling 5.9M LoC, within 50 minutes in total.
-\tia achieves high recall (95\% on average) and fine precision (60\% on average) in capturing temporal influence information in these projects.
-(2) For the three client analyses built on \tia, we demonstrate that they successfully capture all signal asynchrony bugs, timing-flow vulnerabilities, and timeline interfaces in benchmarks derived from the related literature, achieving 100\% recall and 81\% average precision.
-These results showcase the potential of \tia to support diverse practical clients.
-By open-sourcing all implementations supporting \tia's results, we seek to help advance static analysis for modern hardware designs.
+(1) the fundamental capabilities of \tia itself, and (2) its practical potential to support diverse hardware analysis clients.
+For the fundamental capabilities of \tia, we demonstrate that it efficiently analyzes 13 real-world hardware designs from popular Chisel projects, averaging 2.2K GitHub stars and totaling 5.9M LoC, within 42.8 minutes in total.
+\tia achieves strong soundness (97.3\% recall on average) and fine precision (62.6\% precision on average) in capturing temporal influences in these projects.
+For the practical potential of \tia, we demonstrate that the three client analyses built on \tia successfully capture all signal asynchrony bugs (85.7\% precision), timing-flow information leaks (75\% precision), and timeline intervals (92.4\% precision for lower bounds and 72.7\% precision for upper bounds) in benchmarks derived from related literature, achieving 100\% recall in all three tasks.
+
+In summary, this work makes the following contributions:
+\begin{itemize}[leftmargin=*]
+    \item
+    We present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel---the most popular modern HDL.
+    \item
+    We formalize the fundamental question that \tia aims to answer as a static analysis problem, introduce the formalism of \tia, and prove properties about its soundness, convergence, and precision.\looseness=-1
+    \item
+    We develop three client analyses on top of \tia, spanning hardware bug detection, hardware security analysis, and hardware design understanding, to demonstrate \tia's practical potential to support diverse hardware analysis clients.
+    \item
+    We evaluate \tia's soundness (97.3\% recall on average), precision (62.6\% on average), and efficiency (42.8 minutes for 5.9M LoC), as well as the performance of the three client analyses on their respective tasks.
+    \item
+    We will submit an artifact for reproducing all experimental results and fully open-source the implementations of \tia and its three client analyses.
+\end{itemize}
+We hope this work further explores the potential of static analysis for hardware description languages and encourages future innovations in this direction.

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{43}
+\begin{thebibliography}{58}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -35,6 +35,26 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[iee(2005)]%
+        {ieee_verilog}
+ \bibinfo{year}{2005}\natexlab{}.
+\newblock \bibinfo{title}{{IEEE} {Standard} for {Verilog} {Hardware}
+  {Description} {Language}}.
+\newblock
+\showISBNx{978-0-7381-4851-9}
+\href{https://doi.org/10.1109/IEEESTD.2006.99495}{doi:\nolinkurl{10.1109/IEEESTD.2006.99495}}
+
+
+\bibitem[iee(2023)]%
+        {ieee_systemverilog}
+ \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{IEEE} {Standard} for {SystemVerilog}--{Unified}
+  {Hardware} {Design}, {Specification}, and {Verification} {Language}}.
+\newblock
+\showISBNx{979-8-8557-0500-3}
+\href{https://doi.org/10.1109/ieeestd.2024.10458102}{doi:\nolinkurl{10.1109/ieeestd.2024.10458102}}
+
 
 \bibitem[qua(2023)]%
         {quasar}
@@ -81,6 +101,23 @@
 \href{https://doi.org/10.1109/ICCAD.2017.8203772}{doi:\nolinkurl{10.1109/ICCAD.2017.8203772}}
 
 
+\bibitem[Arzt et~al\mbox{.}(2014)]%
+        {arzt_flowdroid_2014}
+\bibfield{author}{\bibinfo{person}{Steven Arzt}, \bibinfo{person}{Siegfried
+  Rasthofer}, \bibinfo{person}{Christian Fritz}, \bibinfo{person}{Eric Bodden},
+  \bibinfo{person}{Alexandre Bartel}, \bibinfo{person}{Jacques Klein},
+  \bibinfo{person}{Yves Le~Traon}, \bibinfo{person}{Damien Octeau}, {and}
+  \bibinfo{person}{Patrick McDaniel}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{FlowDroid}: precise context, flow, field,
+  object-sensitive and lifecycle-aware taint analysis for {Android} apps}.
+\newblock \bibinfo{journal}{\emph{SIGPLAN Not.}} \bibinfo{volume}{49},
+  \bibinfo{number}{6} (\bibinfo{date}{June} \bibinfo{year}{2014}),
+  \bibinfo{pages}{259--269}.
+\newblock
+\showISSN{0362-1340, 1558-1160}
+\href{https://doi.org/10.1145/2666356.2594299}{doi:\nolinkurl{10.1145/2666356.2594299}}
+
+
 \bibitem[Asanović et~al\mbox{.}(2016)]%
         {asanovic_rocket_2016}
 \bibfield{author}{\bibinfo{person}{Krste Asanović}, \bibinfo{person}{Rimas
@@ -104,6 +141,22 @@
 \url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-17.html}
 \showURL{%
 \tempurl}
+
+
+\bibitem[Bachrach et~al\mbox{.}(2012)]%
+        {bachrach_chisel_2012}
+\bibfield{author}{\bibinfo{person}{Jonathan Bachrach}, \bibinfo{person}{Huy
+  Vo}, \bibinfo{person}{Brian Richards}, \bibinfo{person}{Yunsup Lee},
+  \bibinfo{person}{Andrew Waterman}, \bibinfo{person}{Rimas Avižienis},
+  \bibinfo{person}{John Wawrzynek}, {and} \bibinfo{person}{Krste Asanović}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Chisel: constructing hardware in a {Scala} embedded
+  language}. In \bibinfo{booktitle}{\emph{Proceedings of the 49th {Annual}
+  {Design} {Automation} {Conference}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{San Francisco California}, \bibinfo{pages}{1216--1225}.
+\newblock
+\showISBNx{978-1-4503-1199-1}
+\href{https://doi.org/10.1145/2228360.2228584}{doi:\nolinkurl{10.1145/2228360.2228584}}
 
 
 \bibitem[Bruant et~al\mbox{.}(2020)]%
@@ -132,6 +185,20 @@
 \newblock
 
 
+\bibitem[Cai et~al\mbox{.}(2021)]%
+        {cai_canary_2021}
+\bibfield{author}{\bibinfo{person}{Yuandao Cai}, \bibinfo{person}{Peisen Yao},
+  {and} \bibinfo{person}{Charles Zhang}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Canary: practical static detection of inter-thread
+  value-flow bugs}. In \bibinfo{booktitle}{\emph{Proceedings of the 42nd {ACM}
+  {SIGPLAN} {International} {Conference} on {Programming} {Language} {Design}
+  and {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{Virtual
+  Canada}, \bibinfo{pages}{1126--1140}.
+\newblock
+\showISBNx{978-1-4503-8391-2}
+\href{https://doi.org/10.1145/3453483.3454099}{doi:\nolinkurl{10.1145/3453483.3454099}}
+
+
 \bibitem[Celio et~al\mbox{.}(2015)]%
         {celio_berkeley_2015}
 \bibfield{author}{\bibinfo{person}{Christopher Celio},
@@ -146,6 +213,21 @@
 \url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-167.html}
 \showURL{%
 \tempurl}
+
+
+\bibitem[Chandra et~al\mbox{.}(2009)]%
+        {chandra_snugglebug_2009}
+\bibfield{author}{\bibinfo{person}{Satish Chandra}, \bibinfo{person}{Stephen~J.
+  Fink}, {and} \bibinfo{person}{Manu Sridharan}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Snugglebug: a powerful approach to weakest
+  preconditions}.
+\newblock \bibinfo{journal}{\emph{SIGPLAN Not.}} \bibinfo{volume}{44},
+  \bibinfo{number}{6} (\bibinfo{date}{May} \bibinfo{year}{2009}),
+  \bibinfo{pages}{363--374}.
+\newblock
+\showISSN{0362-1340, 1558-1160}
+\href{https://doi.org/10.1145/1543135.1542517}{doi:\nolinkurl{10.1145/1543135.1542517}}
 
 
 \bibitem[Chen et~al\mbox{.}(2026)]%
@@ -207,6 +289,37 @@
   \bibinfo{address}{Gaithersburg, MD}. \bibinfo{pages}{NIST SP 500--326} pages.
 \newblock
 \href{https://doi.org/10.6028/NIST.SP.500-326}{doi:\nolinkurl{10.6028/NIST.SP.500-326}}
+
+
+\bibitem[Dura et~al\mbox{.}(2021)]%
+        {dura_javadl_2021}
+\bibfield{author}{\bibinfo{person}{Alexandru Dura}, \bibinfo{person}{Christoph
+  Reichenbach}, {and} \bibinfo{person}{Emma Söderberg}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{JavaDL}: automatically incrementalizing {Java} bug
+  pattern detection}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{5}, \bibinfo{number}{OOPSLA} (\bibinfo{date}{Oct.}
+  \bibinfo{year}{2021}), \bibinfo{pages}{1--31}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3485542}{doi:\nolinkurl{10.1145/3485542}}
+
+
+\bibitem[Ferreira et~al\mbox{.}(2024)]%
+        {ferreira_efficient_2024}
+\bibfield{author}{\bibinfo{person}{Mafalda Ferreira}, \bibinfo{person}{Miguel
+  Monteiro}, \bibinfo{person}{Tiago Brito}, \bibinfo{person}{Miguel~E.
+  Coimbra}, \bibinfo{person}{Nuno Santos}, \bibinfo{person}{Limin Jia}, {and}
+  \bibinfo{person}{José~Fragoso Santos}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Efficient {Static} {Vulnerability} {Analysis} for
+  {JavaScript} with {Multiversion} {Dependency} {Graphs}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2024}), \bibinfo{pages}{417--441}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3656394}{doi:\nolinkurl{10.1145/3656394}}
 
 
 \bibitem[Forencich(2015)]%
@@ -329,6 +442,22 @@
 \href{https://doi.org/10.1109/ICCAD.2017.8203780}{doi:\nolinkurl{10.1109/ICCAD.2017.8203780}}
 
 
+\bibitem[Le et~al\mbox{.}(2022)]%
+        {le_finding_2022}
+\bibfield{author}{\bibinfo{person}{Quang~Loc Le}, \bibinfo{person}{Azalea
+  Raad}, \bibinfo{person}{Jules Villard}, \bibinfo{person}{Josh Berdine},
+  \bibinfo{person}{Derek Dreyer}, {and} \bibinfo{person}{Peter~W. O'Hearn}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Finding real bugs in big programs with
+  incorrectness logic}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{6}, \bibinfo{number}{OOPSLA1} (\bibinfo{date}{April}
+  \bibinfo{year}{2022}), \bibinfo{pages}{1--27}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3527325}{doi:\nolinkurl{10.1145/3527325}}
+
+
 \bibitem[Lee et~al\mbox{.}(2015)]%
         {lee_hwacha_2015}
 \bibfield{author}{\bibinfo{person}{Yunsup Lee}, \bibinfo{person}{Albert Ou},
@@ -343,6 +472,38 @@
 \url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-263.html}
 \showURL{%
 \tempurl}
+
+
+\bibitem[Li et~al\mbox{.}(2024)]%
+        {li_enhancing_2024}
+\bibfield{author}{\bibinfo{person}{Haonan Li}, \bibinfo{person}{Yu Hao},
+  \bibinfo{person}{Yizhuo Zhai}, {and} \bibinfo{person}{Zhiyun Qian}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Enhancing {Static} {Analysis} for {Practical} {Bug}
+  {Detection}: {An} {LLM}-{Integrated} {Approach}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{OOPSLA1} (\bibinfo{date}{April}
+  \bibinfo{year}{2024}), \bibinfo{pages}{474--499}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3649828}{doi:\nolinkurl{10.1145/3649828}}
+
+
+\bibitem[Li et~al\mbox{.}(2016)]%
+        {li_program_2016}
+\bibfield{author}{\bibinfo{person}{Yue Li}, \bibinfo{person}{Tian Tan},
+  \bibinfo{person}{Yifei Zhang}, {and} \bibinfo{person}{Jingling Xue}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Program {Tailoring}: {Slicing} by {Sequential}
+  {Criteria}}.
+\newblock \bibinfo{journal}{\emph{LIPIcs, Volume 56, ECOOP 2016}}
+  \bibinfo{volume}{56} (\bibinfo{year}{2016}), \bibinfo{pages}{15:1--15:27}.
+\newblock
+\shownote{Artwork Size: 27 pages, 1479514 bytes ISBN: 9783959770149 Medium:
+  application/pdf}.
+\newblock
+\showISSN{1868-8969}
+\href{https://doi.org/10.4230/LIPICS.ECOOP.2016.15}{doi:\nolinkurl{10.4230/LIPICS.ECOOP.2016.15}}
 
 
 \bibitem[Liang et~al\mbox{.}(2025)]%
@@ -360,6 +521,22 @@
 \newblock
 \showISSN{2475-1421}
 \href{https://doi.org/10.1145/3729307}{doi:\nolinkurl{10.1145/3729307}}
+
+
+\bibitem[Lipp et~al\mbox{.}(2022)]%
+        {lipp_empirical_2022}
+\bibfield{author}{\bibinfo{person}{Stephan Lipp}, \bibinfo{person}{Sebastian
+  Banescu}, {and} \bibinfo{person}{Alexander Pretschner}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{An empirical study on the effectiveness of static
+  {C} code analyzers for vulnerability detection}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 31st {ACM} {SIGSOFT}
+  {International} {Symposium} on {Software} {Testing} and {Analysis}}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{Virtual South Korea},
+  \bibinfo{pages}{544--555}.
+\newblock
+\showISBNx{978-1-4503-9379-9}
+\href{https://doi.org/10.1145/3533767.3534380}{doi:\nolinkurl{10.1145/3533767.3534380}}
 
 
 \bibitem[Ma et~al\mbox{.}(2022a)]%
@@ -556,6 +733,32 @@
 \href{https://doi.org/10.1007/s41635-017-0001-6}{doi:\nolinkurl{10.1007/s41635-017-0001-6}}
 
 
+\bibitem[Siemens(2019)]%
+        {temporal-relationship}
+\bibfield{author}{\bibinfo{person}{Verification Academy~Forums Siemens}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Assertion to Check a Signal Asserting Before or After
+  a Few Clock Cycles}.
+\newblock
+  \bibinfo{howpublished}{\url{https://verificationacademy.com/forums/t/assertion-to-check-a-signal-asserting-before-or-after-few-clock-cycles/36074}}.
+\newblock
+
+
+\bibitem[Sridharan et~al\mbox{.}(2007)]%
+        {sridharan_thin_2007}
+\bibfield{author}{\bibinfo{person}{Manu Sridharan}, \bibinfo{person}{Stephen~J.
+  Fink}, {and} \bibinfo{person}{Rastislav Bodik}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Thin slicing}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 28th {ACM} {SIGPLAN}
+  {Conference} on {Programming} {Language} {Design} and {Implementation}}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{San Diego California USA},
+  \bibinfo{pages}{112--122}.
+\newblock
+\showISBNx{978-1-59593-633-2}
+\href{https://doi.org/10.1145/1250734.1250748}{doi:\nolinkurl{10.1145/1250734.1250748}}
+
+
 \bibitem[Sui et~al\mbox{.}(2020)]%
         {sui_recall_2020}
 \bibfield{author}{\bibinfo{person}{Li Sui}, \bibinfo{person}{Jens Dietrich},
@@ -578,6 +781,16 @@
 \newblock \bibinfo{title}{Wishbone Round Robin Arbiter}.
 \newblock
   \bibinfo{howpublished}{\url{https://opencores.org/projects/wb_conbus}}.
+\newblock
+
+
+\bibitem[Wikipedia(2025)]%
+        {vcd-waveform}
+\bibfield{author}{\bibinfo{person}{Wikipedia}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Value Change Dump (Waveform)}.
+\newblock
+  \bibinfo{howpublished}{\url{https://en.wikipedia.org/wiki/Value_change_dump}}.
 \newblock
 
 
