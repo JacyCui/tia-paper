@@ -6,7 +6,7 @@ However, existing research on hardware static analysis has not explored reasonin
 To address this research gap, we present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel---the most popular modern HDL.
 \tia answers a fundamental question about hardware temporal behavior: after which clock cycles can each input to a circuit \emph{influence} each circuit location?
 We formally define this question and \tia, and prove properties about \tia's soundness, convergence, and precision.
-To demonstrate \tia's practical potential to support diverse hardware analysis clients concerning temporal behavior, we develop three client analyses on top of it: detecting signal asynchrony bugs for hardware bug detection, identifying timing-flow information leaks for hardware security analysis, and inferring timeline intervals for hardware design understanding.
+To demonstrate \tia's practical potential to support diverse hardware analysis clients, we develop three client analyses on top of it: detecting signal asynchrony bugs for hardware bug detection, identifying timing-flow information leaks for hardware security analysis, and inferring timeline intervals for hardware design understanding.
 
 Our evaluation of \tia focuses on two aspects:
 (1)

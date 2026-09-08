@@ -1,0 +1,15 @@
+{
+  signal: [
+    {name: 'clock', wave: 'p....'},
+    {name: 'dividend', wave: 'x2x..', data: ['0x2']},
+    {name: 'divisor', wave: 'x3x..', data: ['0x2'], node: '.a'},
+    {},
+    {name: 'valid', wave: '0...1', node: '....b'},
+  ],
+  edge: [
+    'a~->b 3 cycles (slow flow)'
+  ],
+  config: {
+    hscale: 1
+  },
+}

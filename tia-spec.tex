@@ -1,0 +1,184 @@
+\subsection{Specification and Soundness of \tia}
+
+To present the specification of \tia in an intuitive and easy-to-understand way, we first introduce a graph structure that visualizes the temporal influence relationships between circuit locations.
+
+\begin{definition}[Form of Temporal Influence Graph (TIG)]\label{def:tig}
+    A temporal influence graph (TIG) has the form $G = \langle \locations, E\rangle$, where the nodes are circuit locations in $\locations$ and each edge $l_1 \xrightarrow{\ i\ } l_2 \in E \subseteq \locations \times \nats \times \locations$ indicates that a temporal influence at $l_1$ takes $i$ clock cycles to reach $l_2$.
+    For brevity, we write $l_1 \xrightarrow{\ \ \ } l_2$ as shorthand for $l_1 \xrightarrow{\ 0\ } l_2$.
+\end{definition}
+
+The following definition specifies how \tia computes the temporal influence information of a circuit and constructs a temporal influence graph (TIG) for the circuit on the fly.
+
+\begin{definition}[Temporal Influence Analysis (\tia)]\label{def:tia}
+    The temporal influence analysis result of a circuit $C \in \sCircuit$ is the temporal influence information $\absT$ derived by the rules in Figure~\ref{fig:tia}.
+    These rules also construct a temporal influence graph (TIG) $G = \langle \locations, E\rangle$ for $C$.
+\end{definition}
+
+\begin{figure}[tp]
+    \centering
+    $o_p^i \in \absT(l)$ means that poking input port $p$ can influence location $l$ after $i$ clock cycles.
+    \vspace{-1ex}
+
+    \begin{mathpar}
+        \inferrule*[lab=\footnotesize\rTiaPort]{
+        }{
+            \absT(p) = \{o_p^0\}
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTiaPropa]{
+            o_p^i \in \absT(l_1)
+            \and
+            l_1 \xrightarrow{\ j\ } l_2 \in E
+        }{
+            o_p^{i + j} \in \absT(l_2)
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTiaWire]{
+            x = e
+            \and
+            y \in \Use(e)
+        }{
+            y \xrightarrow{\ \ \ } x \in E
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTiaReg]{
+            x \Leftarrow y
+        }{
+            y \xrightarrow{\ 1 \ } x \in E
+        }
+        \\
+        \inferrule*[lab=\footnotesize\rTiaMemWrite]{
+            m[x] \gets y
+            \and
+            m :: (k \to j)
+        }{
+            y \xrightarrow{\ k \ } m[*] \in E
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTiaMemRead]{
+            x \gets m[y]
+            \and
+            m :: (i \to k)
+        }{
+            m[*] \xrightarrow{\ k\ } x \in E
+        }
+    \end{mathpar}
+
+    \vspace{.5ex}
+
+    $m[*] \in \variables$ is a special analysis-only variable that abstracts all cells of memory $m$:
+    \[
+    \forall i \in \nats. \absT(m[i]) = \absT(m[*]).
+    \]
+
+    \caption{Rules for temporal influerence analysis (\tia).}\label{fig:tia}
+
+\end{figure}
+
+Before proving the soundness of \tia, we first define what it means for \tia's result to be sound (Definition~\ref{def:soundness}).
+
+\begin{definition}[Over-approximation Relation of Temporal Influence Information]\label{def:over-approx}
+    Given two temporal influence information $T: \locations \to \powerset(\objects)$ and $\absT: \locations \to \powerset(\objects)$, we say that $\absT$ \emph{over-approximates} $T$, denoted $T \sqsubseteq \absT$, if $\absT$ maps every circuit location to a superset of the temporal influence objects mapped to that location by $T$.
+    Formally,
+    \[
+    T \sqsubseteq \absT \Leftrightarrow \forall l \in \locations. T(l) \subseteq \absT(l).
+    \]
+\end{definition}
+
+\begin{definition}[Soundness of Temporal Influence Information]\label{def:soundness}
+    We say that a temporal influence information $\absT$ is \emph{sound} for a circuit $C$ if, for any execution trace $S$ of $C$\footnote{When we say "a trace $S$ of a circuit $C$", we mean that $S$ only contains connections and locations from $C$.} whose temporal influence semantics is
+    \[
+    \langle S_0, T_0\rangle \rightsquigarrow \langle S_1, T_1\rangle \rightsquigarrow \langle S_2, T_2\rangle \rightsquigarrow \dots,
+    \]
+    where $S_0 = S$ and $T_0 = \{\_ \mapsto \emptyset\}$, $\absT$ over-approximates every $T_i$:
+    \[
+    \forall i \in \nats.\ T_i \sqsubseteq \absT.
+    \]
+\end{definition}
+
+We can now prove the soundness of \tia.
+
+\begin{theorem}[\tia's Soundness]\label{theo:soundness}
+    For any circuit, the temporal influence information $\absT$ computed by \tia is sound.
+\end{theorem}
+\begin{proof}
+    We prove by induction on the temporal influence semantics
+    $\langle S_0, T_0\rangle \rightsquigarrow \langle S_1, T_1\rangle \rightsquigarrow \dots$ where $T_0 = \emptyset$, that $\forall i \in \nats. T_i \sqsubseteq \absT$.
+    The theorem then follows directly from Definition~\ref{def:soundness}.
+
+    \paragraph{Base Case} Since $T_0 = \{\_ \mapsto \emptyset\}$, we have $\forall l \in \locations. T_0(l) = \emptyset \subseteq \absT(l)$.
+    Thus, $T_0 \sqsubseteq \absT$ by Definition~\ref{def:over-approx}.
+
+    \paragraph{Inductive Step}
+    Suppose $\langle S_i, T_i\rangle \rightsquigarrow \langle S_{i+1}, T_{i+1}\rangle$ and $T_i \sqsubseteq \absT$.
+    We prove $T_{i+1} \sqsubseteq \absT$ by case analysis on the applied reduction rule.
+
+    \vspace{1ex}
+    \noindent
+    (1) Case $\rTPoke$:
+    We have $T_{i+1} = T_i\left[p \mapsto \{o_p^0\}\right]$.
+    By $\rTiaPort$, $\absT(p) = \{o_p^0\}$, and hence
+    \[
+    T_{i+1}(p) = \{o_p^0\} \subseteq \absT(p).
+    \]
+    All other locations are unchanged, so $T_{i+1} \sqsubseteq \absT$.
+
+    \vspace{1ex}
+    \noindent
+    (2) Case $\rTWire$:
+    We have $T_{i+1} = T_i\left[x \mapsto \bigcup_{y \in \Use(e)}T_i(y)\right]$.
+    By $\rTiaWire$ and $\rTiaPropa$,
+    \[
+    \forall y \in \Use(e). \absT(y) \subseteq \absT(x).
+    \]
+    By the inductive hypothesis, $T_i(y)\subseteq\absT(y)$.
+    Therefore,
+    \[
+    T_{i+1}(x) = \bigcup_{y \in \Use(e)}T_i(y) \subseteq \bigcup_{y \in \Use(e)}\absT(y) \subseteq \absT(x).
+    \]
+    All other locations are unchanged, and hence $T_{i+1} \sqsubseteq \absT$.
+
+    \vspace{1ex}
+    \noindent
+    (3) Case $\rTReg$:
+    We have $T_{i+1} = T_i\left[x \mapsto \{o_p^{j+1} \mid o_p^{j} \in T_i(y)\}\right]$.
+    By rule $\rTiaReg$ and $\rTiaPropa$,
+    \[
+    \forall o_p^j \in \absT(y).\ o_p^{j+1} \in \absT(x).
+    \]
+    Since $T_i(y) \subseteq \absT(y)$ by the inductive hypothesis,
+    \[
+    T_{i+1}(x) = \{o_p^{j+1} \mid o_p^{j} \in T_i(y)\} \subseteq \{o_p^{j+1} \mid o_p^{j} \in \absT(y)\} \subseteq \absT(x).
+    \]
+    Thus $T_{i+1} \sqsubseteq \absT$.
+
+    \vspace{1ex}
+    \noindent
+    (4) Case $\rTMemWrite$:
+    $T_{i+1} = T_i\left[m[h] \mapsto \{o_p^{j+k} \mid o_p^{j} \in T_i(y)\}\right]$.
+    By $\rTiaMemWrite$ and $\rTiaPropa$,
+    \[
+    \forall o_p^j \in \absT(y).\ o_p^{j+k} \in \absT(m[*]).
+    \]
+    By the inductive hypothesis, $T_i(y) \subseteq \absT(y)$, so,
+    \[
+    T_{i+1}(m[h]) = \{o_p^{j+k} \mid o_p^{j} \in T_i(y)\} \subseteq \{o_p^{j+k} \mid o_p^{j} \in \absT(y)\} \subseteq \absT(m[*]).
+    \]
+    Since $\absT(m[h]) = \absT(m[*])$ by Definition~\ref{def:tia}, $T_{i+1}(m[h])\subseteq\absT(m[h])$.
+    Therefore, $T_{i+1} \sqsubseteq \absT$.
+
+    \vspace{1ex}
+    \noindent
+    (5) Case $\rTMemRead$:
+    $T_{i+1} = T_i\left[x \mapsto \{o_p^{j+k} \mid o_p^{j} \in T_i(m[h])\}\right]$.
+    By $\rTiaMemRead$ and $\rTiaPropa$,
+    \[
+    \forall o_p^j \in \absT(m[*]).\ o_p^{j+k} \in \absT(x).
+    \]
+    Since $T_i(m[h]) \subseteq \absT(m[h])$ by inductive hypothesis and $\absT(m[h]) = \absT(m[*])$ by Definition~\ref{def:tia}, we have $T_i(m[h]) \subseteq \absT(m[*])$.
+    Therefore,
+    \[
+    T_{i+1}(x) = \{o_p^{j+k} \mid o_p^{j} \in T_i(m[h])\} \subseteq \{o_p^{j+k} \mid o_p^{j} \in \absT(m[*])\} \subseteq \absT(x)
+    \]
+    Thus $T_{i+1} \sqsubseteq \absT$.
+\end{proof}

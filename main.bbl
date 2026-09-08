@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{58}
+\begin{thebibliography}{60}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -489,11 +489,25 @@
 \href{https://doi.org/10.1145/3649828}{doi:\nolinkurl{10.1145/3649828}}
 
 
-\bibitem[Li et~al\mbox{.}(2016)]%
+\bibitem[Li et~al\mbox{.}(2016a)]%
+        {li_specification_2016}
+\bibfield{author}{\bibinfo{person}{Patrick~S. Li}, \bibinfo{person}{Adam~M.
+  Izraelevitz}, {and} \bibinfo{person}{Jonathan Bachrach}.}
+  \bibinfo{year}{2016}\natexlab{a}.
+\newblock \bibinfo{booktitle}{\emph{Specification for the FIRRTL Language}}.
+\newblock \bibinfo{type}{{T}echnical {R}eport} UCB/EECS-2016-9.
+\newblock
+\urldef\tempurl%
+\url{http://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-9.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Li et~al\mbox{.}(2016b)]%
         {li_program_2016}
 \bibfield{author}{\bibinfo{person}{Yue Li}, \bibinfo{person}{Tian Tan},
   \bibinfo{person}{Yifei Zhang}, {and} \bibinfo{person}{Jingling Xue}.}
-  \bibinfo{year}{2016}\natexlab{}.
+  \bibinfo{year}{2016}\natexlab{b}.
 \newblock \showarticletitle{Program {Tailoring}: {Slicing} by {Sequential}
   {Criteria}}.
 \newblock \bibinfo{journal}{\emph{LIPIcs, Volume 56, ECOOP 2016}}
@@ -700,6 +714,19 @@
 \newblock \bibinfo{howpublished}{\url
   {https://github.com/ucb-bar/riscv-sodor/tree/sodor-old}}.
 \newblock
+
+
+\bibitem[Rosales and García-Sánchez(2009)]%
+        {rosales_numerical_2009}
+\bibfield{author}{\bibinfo{person}{J.C. Rosales} {and} \bibinfo{person}{P.~A.
+  García-Sánchez}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Numerical {Semigroups}}}.
+  \bibinfo{series}{Developments in {Mathematics}}, Vol.~\bibinfo{volume}{20}.
+\newblock \bibinfo{publisher}{Springer New York}, \bibinfo{address}{New York,
+  NY}.
+\newblock
+\showISBNx{978-1-4419-0159-0 978-1-4419-0160-6}
+\href{https://doi.org/10.1007/978-1-4419-0160-6}{doi:\nolinkurl{10.1007/978-1-4419-0160-6}}
 
 
 \bibitem[Salmani et~al\mbox{.}(2013)]%

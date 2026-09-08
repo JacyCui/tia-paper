@@ -1,0 +1,15 @@
+{
+  signal: [
+    {name: 'clock', wave: 'p....'},
+    {name: 'a', wave: 'x2x..', data: ['0x2']},
+    {name: 'b', wave: 'x2x..', data: ['0x2'],},
+    {name: 'a_plus_b', wave: 'x.3x.', data: ['0x4']},
+    {name: 'a_plus_2b', wave: 'x..4x', data: ['0x6']},
+  ],
+  config: {
+    hscale: 1,
+  },
+  foot:{
+    text:'  G     G+1   G+2   G+3',
+  },
+}

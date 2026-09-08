@@ -1,0 +1,15 @@
+{
+  signal: [
+    {name: 'clock', wave: 'p....'},
+    {name: 'request', wave: '01x..'},
+    {name: 'valid', wave: '0.1x.', node: '..a'},
+    {},
+    {name: 'response', wave: 'x..3x', data: ["data"], node: '...b'},
+  ],
+  edge: [
+    'a~>b asynchrony'
+  ],
+  config: {
+    hscale: 1
+  },
+}

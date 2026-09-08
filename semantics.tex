@@ -1,0 +1,111 @@
+\subsection{Temporal Influence Semantics}\label{sec:semantics}
+
+\begin{figure}[tp]
+    \[
+    \begin{array}{rlrll}
+        C     & \in \sCircuit & := & \mathcal{P}(\sConnect) & \triangleright\ \text{a circuit is a set of connections} \\
+        c     & \in \sConnect & := & x = e & \triangleright\ \text{wire connection} \\
+        &               &  | & x \Leftarrow y & \triangleright\ \text{register connection} \\
+        &               &  | & m[x] \gets y & \triangleright\ \text{memory write connection} \\
+        &               &  | & x \gets m[y] & \triangleright\ \text{memory read connection} \\
+        S     & \in \sTrace   & := & s_;^* & \triangleright\ \text{a circuit execution trace is a sequence} \\
+        & & & & \ \ \ \text{of events seperated by semicolons}\\
+        s     & \in \sEvent  & := & \vpoke p\ n & \triangleright\ \text{poking an input port to a value}\\
+        &              &  | & x = e & \triangleright\ \text{wire update event}\\
+        &              &  | & x \Leftarrow y & \triangleright\ \text{register update event}\\
+        &              &  | & m[i] \gets y & \triangleright\ \text{memory write event}\\
+        &              &  | & x \gets m[j] & \triangleright\ \text{memory read event}\\
+    \end{array}
+    \]
+    \caption{Syntax of circuits and their execution traces.}\label{fig:syntax}
+\end{figure}
+
+\begin{definition}[Circuit \& Trace Syntax]\label{def:syntax}
+    Figure~\ref{fig:syntax} presents the syntax of circuits $C \in \sCircuit$ and their execution traces $S \in \sTrace$.
+\end{definition}
+
+The circuit representation largely inherits the core calculus of Chisel from~\cite{cui_chisa_2026}, except that we introduce two primitive connections for memory writes and reads.
+Although memory write and read connections can theoretically be desugared into basic wire and register connections, we retain them as primitives to make the representation more concise and easier to implement, as memory operations are themselves implemented as primitives in Chisel~\cite{bachrach_chisel_2012,izraelevitz_reusability_2017,li_specification_2016}.
+For example, a 4\,GB memory could theoretically be desugared into $2^{32}$ one-byte registers, but such a representation would be unnecessarily large; we therefore retain memory operations as primitives.
+
+Each event in an execution trace corresponds to the dynamic execution of a connection, with two special cases:
+\begin{itemize}[leftmargin=*]
+    \item
+    A poking event (i.e., $\vpoke p\ n$) is added to represent an external stimulus to the circuit that sets the value of a free input port (i.e., an input port not defined by any connection).
+    \item
+    The addresses of memory write and read operations become concrete during execution (i.e., from $x,y$ to $i,j$), indicating which exact memory cells are written or read.
+\end{itemize}
+Such execution traces can be obtained by instrumenting the operational semantics in~\cite{cui_chisa_2026}, with one subtlety: register updates are synchronous at runtime.
+For example, $x \Leftarrow y \parallel y \Leftarrow x$ simultaneously swaps the values of $x$ and $y$, whereas its direct serialization $x \Leftarrow y; y \Leftarrow x$ does not preserve this behavior.
+To faithfully capture synchronous semantics in sequential traces, we need to introduce intermediate variables during serialization.
+For example, the resulting trace $t_1 = y; t_2 = x; x \Leftarrow t_1; y \Leftarrow t_2$ correctly captures the swap of $x$ and $y$.
+Since this trace-generation process is straightforward and not central to our discussion of temporal influence, we omit its formalization for brevity.
+
+\begin{figure}[tp]
+    \begin{mathpar}
+        \raisebox{10pt}{\parbox{3cm}{
+                \centering
+                initial configuration:
+                $\langle S, \{\_ \mapsto \emptyset\}\rangle$
+        }}
+        \and
+        \inferrule*[lab=\footnotesize\rTPoke]{
+            T' = T\left[p \mapsto \{o_p^0\}\right]
+        }{
+            \langle\vpoke p\ n; S,      T\rangle\rightsquigarrow\langle S, T'\rangle
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTWire]{
+            T' = T\left[x \mapsto \bigcup_{y \in \Use(e)}T(y)\right]
+        }{
+            \langle x = e; S, T\rangle\rightsquigarrow\langle S, T'\rangle
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTReg]{
+            T' = T\left[x \mapsto \{o_p^{i+1} \mid o_p^{i} \in T(y)\}\right]
+        }{
+            \langle x \Leftarrow y; S, T\rangle\rightsquigarrow\langle S, T'\rangle
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTMemWrite]{
+            m :: (k \to \_)
+            \and
+            T' = T\left[m[i] \mapsto \{o_p^{j+k} \mid o_p^{j} \in T(y)\}\right]
+        }{
+            \langle m[i] \gets y; S, T\rangle\rightsquigarrow\langle S, T'\rangle
+        }
+        \and
+        \inferrule*[lab=\footnotesize\rTMemRead]{
+            m :: (\_ \to k)
+            \and
+            T' = T\left[x \mapsto \{o_p^{i+k} \mid o_p^{i} \in T(m[j])\}\right]
+        }{
+            \langle x \gets m[j]; S, T\rangle\rightsquigarrow\langle S, T'\rangle
+        }
+    \end{mathpar}
+    \caption{Rules for temporal influence semantics, where $\_$ is a wildcard.}\label{fig:semantics}
+\end{figure}
+
+\begin{definition}[Temporal Influence Semantics]\label{def:semantics}
+    The temporal influence semantics of a circuit execution trace $S$ is defined as the reduction sequence starting from the initial configuration $\langle S, \{\_ \mapsto \emptyset\}\rangle \in \sTrace \times (\locations \to \powerset(\objects))$ and following the rules in Figure~\ref{fig:semantics}.
+\end{definition}
+
+The temporal influence semantics leverages the execution trace to track the dynamic temporal influence information throughout a circuit execution.
+For example, consider the following trace:
+\[
+S = \left(\vpoke \sen\ 1;\ t_1 = \vmux(\sen, t_2, \ssout);\ \vpoke \ssin\ 2;\ t_2 = \ssout + \ssin;\ t_1 = \vmux(\sen, t_2, \ssout);\ \ssout \Leftarrow t_1\right).
+\]
+Its temporal influence semantics proceeds as follows:
+\[
+\begin{aligned}
+    & \langle S, \{\_ \mapsto \emptyset\}\rangle\\
+    =\ & \langle \vpoke \sen\ 1; \dots, \{\_ \mapsto \emptyset\}\rangle & \\
+    \rightsquigarrow\ & \langle t_1 = \vmux(\sen, t_2, \ssout); \dots, \left\{\sen \mapsto \{o_{\sen}^0\}, \_ \mapsto \emptyset\right\}\rangle & (\rTPoke)\\
+    \rightsquigarrow\ & \langle \vpoke \ssin\ 2; \dots, \left\{\sen \mapsto \{o_{\sen}^0\}, t_1 \mapsto \{o_{\sen}^0\}, \_ \mapsto \emptyset\right\}\rangle & (\rTWire)\\
+    \rightsquigarrow\ & \langle t_2 = \ssout + \ssin; \dots, \left\{\sen \mapsto \{o_{\sen}^0\}, \ssin \mapsto \{o_{\ssin}^0\}, t_1 \mapsto \{o_{\sen}^0\}, \_ \mapsto \emptyset\right\}\rangle & (\rTPoke)\\
+    \rightsquigarrow\ & \langle t_1 = \vmux(\sen, t_2, \ssout); \dots, \left\{\sen \mapsto \{o_{\sen}^0\}, \ssin \mapsto \{o_{\ssin}^0\}, t_1 \mapsto \{o_{\sen}^0\}, t_2 \mapsto\{o_{\ssin}^0\}, \_ \mapsto \emptyset\right\}\rangle & (\rTWire)\\
+    \rightsquigarrow\ & \langle \ssout \Leftarrow t_1, \left\{\sen \mapsto \{o_{\sen}^0\}, \ssin \mapsto \{o_{\ssin}^0\}, t_1 \mapsto \{o_{\sen}^0, o_{\ssin}^0\}, t_2 \mapsto\{o_{\ssin}^0\}, \_ \mapsto \emptyset\right\}\rangle & (\rTWire)\\
+    \rightsquigarrow\ & \langle \epsilon, \left\{\sen \mapsto \{o_{\sen}^0\}, \ssin \mapsto \{o_{\ssin}^0\}, t_1 \mapsto \{o_{\sen}^0, o_{\ssin}^0\}, t_2 \mapsto\{o_{\ssin}^0\}, \ssout \mapsto \{o_{\sen}^1, o_{\ssin}^1\}\right\}\rangle & (\rTReg)\\
+\end{aligned}
+\]
+

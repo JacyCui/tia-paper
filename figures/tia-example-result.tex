@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=1,thick]
+    \node (p) at (0, 0) {$\textpurple{p}$};
+    \node[fill=gray!10] at (0, 0.75) {$\{o_p^0\}$};
+
+    \node (x) at (2, 0) {$x$};
+    \node[fill=gray!10] at (2, 0.75) {$\{o_p^{2i}\mid i \in \nats\}$};
+
+    \node (y) at (3, -1) {$y$};
+    \node[fill=gray!10,right=3pt of y] {$\{o_p^{2i + 1}\mid i \in \nats\}$};
+
+    \node (z) at (1, -1) {$z$};
+    \node[fill=gray!10,left=3pt of z] {$\{o_p^{2i + 2}\mid i \in \nats\}$};
+
+    \draw [->] (p) -- (x);
+    \draw [->] (x) --node[above right]{$1$} (y);
+    \draw [->] (y) --node[below]{$1$} (z);
+    \draw [->] (z) -- (x);
+\end{tikzpicture}

@@ -1,0 +1,45 @@
+\subsection{Problem Formulation}
+
+\begin{figure}[tp]
+    \[
+    \begin{array}{rr@{\hspace{3pt}}l}
+        \text{natural numbers} & h, i, j, k & \in \nats\\
+        \text{variables} & x, y, z & \in \variables\\
+        \text{input (free) ports} & p, q & \in \ports \subseteq \variables\\
+        \text{temporal influence objects} & o_p^i & \in \objects = \ports \times \nats\\
+        \text{memories} & m & \in \memories\\
+        \text{memory cells} & m[i] & \in \memories \times \nats\\
+        \text{circuit locations} & l & \in \locations = \variables \cup (\memories \times \nats)\\
+        \text{temporal influence information} & T, \absT & \hspace{1.75pt}:\hspace{1.75pt} \locations \to \powerset(\objects)\\
+        \text{arithemetic expressions} & e & \in \expressions\\
+        \text{integers} & n & \in \ints \subseteq \expressions\\
+    \end{array}
+    \hspace{3pt}
+    \vline
+    \hspace{3pt}
+    \begin{array}{l}
+        m :: (i \to j) \\
+        \text{memory $m$ has write latencies} \\
+        \text{of $i$ cycles and read latency}\\
+        \text{of $j$ cycles.}\\
+        \\
+        \Use(e) : \expressions \to \powerset(\variables) \\
+        \text{gets all variables used in $e$}
+    \end{array}
+    \]
+    \caption{Domains and notations used in formalism.}\label{fig:domains}
+\end{figure}
+
+\emph{Temporal influence analysis} (\tia) answers a basic but fundamental question about the temporal behavior of hardware: after which clock cycles can each input to a circuit\footnote{We focus our discussion on synchronous circuits with a single global clock.} influence each circuit location?
+We represent such temporal influence using a special kind of object:
+\begin{definition}[Temporal Influence Objects]
+    For an input port $p \in \ports$, the temporal influence of poking $p$ after $i \in \nats$ cycles is represented by a temporal influence object $o_p^i \in \objects$, where $\objects = \ports \times \nats$.
+\end{definition}
+\begin{definition}[Temporal Influence Information]
+    The temporal influence information $T : \locations \to \powerset(\objects)$ maps each circuit location $l \in \locations$ to a set of temporal influence objects.
+\end{definition}
+\noindent
+Under this representation, $o_p^i \in T(l)$ means that poking the input port $p$ can influence circuit location $l$ after $i$ clock cycles.
+For example, suppose a circuit has only two input ports $p$ and $q$, where poking $p$ can influence $l$ only after the $i$-th or $j$-th clock cycle, while poking $q$ can influence $l$ only after the $k$-th clock cycle.
+Then, the exact temporal influence information for $l$ is $T(l) = \{o_p^i, o_p^j, o_q^k\}$.
+

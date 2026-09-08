@@ -1,0 +1,20 @@
+\footnotesize
+\begin{tikzpicture}[scale=.9,thick]
+    \node (dd) at (0, 0) {$\textpurple{\mathtt{dividend}}$};
+    \node (dr) at (2.5, 0) {$\textpurple{\mathtt{divisor}}$};
+
+    \node (rdd) at (0, -2) {$\mathtt{reg\_dividend}$};
+    \node (rdr) at (2.5, -1) {$\mathtt{reg\_divisor}$};
+    \node (v)  at (2.5, -2) {$\mathtt{valid}$};
+
+    \draw[->] (dd) -- node[left]{$1$} (rdd);
+    \draw[->] (rdd) edge[loop left] node{$1$} (rdd);
+    \draw[->] (rdr) -- node[above left]{$1$} (rdd);
+    \draw[->] (rdd) -- node[below]{$1$} (v);
+
+    \draw[->] (dr) -- node[right]{$1$} (rdr);
+    \draw[->] (rdr) -- node[right]{$1$} (v);
+
+    \node[fill=gray!10] at (2.5, .7) {$\{o_{\mathtt{divisor}}^0\}$};
+    \node[fill=gray!10] at (2.5, -2.7) {$\{o_{\mathtt{divisor}}^{2+i}\mid i\in\nats\}$};
+\end{tikzpicture}
