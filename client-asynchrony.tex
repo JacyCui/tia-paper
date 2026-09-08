@@ -78,7 +78,7 @@ We'll first introduce signal asynchrony bugs through a simplified example and th
 
 \paragraph{Example of A Signal Asynchrony Bug}
 
-Figure~\ref{fig:asynchrony-code} shows a simplified Chisel example adapted from a bug-fixing commit~\cite{aysnchrony-fix-commit} for a signal asynchrony bug.
+Figure~\ref{fig:asynchrony-code} shows a simplified Chisel example adapted from a bug-fixing commit~\cite{sdspi} for a signal asynchrony bug.
 Deleted code is shown in red, while newly added code is shown in green.
 The code describes a hardware design that responds to requests that requires a minimum two-cycle latency between each request (Line~1) and its corresponding response (Lines~3--4).
 Upon receiving a request, the code therefore buffers the response, which can be computed in a single cycle, for one additional cycle in \texttt{buffered\_response} (Lines~8--10) before assigning it to the output \texttt{response} (Line~11).

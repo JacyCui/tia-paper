@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{60}
+\begin{thebibliography}{85}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -159,6 +159,36 @@
 \href{https://doi.org/10.1145/2228360.2228584}{doi:\nolinkurl{10.1145/2228360.2228584}}
 
 
+\bibitem[Bourgeat et~al\mbox{.}(2025)]%
+        {bourgeat_making_2025}
+\bibfield{author}{\bibinfo{person}{Thomas Bourgeat}, \bibinfo{person}{Jiazheng
+  Liu}, \bibinfo{person}{Adam Chlipala}, {and} \bibinfo{person}{{Arvind}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Making {Concurrent} {Hardware} {Verification}
+  {Sequential}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2025}), \bibinfo{pages}{2007--2031}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3729331}{doi:\nolinkurl{10.1145/3729331}}
+
+
+\bibitem[Bourgeat et~al\mbox{.}(2020)]%
+        {bourgeat_essence_2020}
+\bibfield{author}{\bibinfo{person}{Thomas Bourgeat}, \bibinfo{person}{Clément
+  Pit-Claudel}, \bibinfo{person}{Adam Chlipala}, {and}
+  \bibinfo{person}{{Arvind}}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{The essence of {Bluespec}: a core language for
+  rule-based hardware design}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  41st {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and
+  {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{London UK},
+  \bibinfo{pages}{243--257}.
+\newblock
+\showISBNx{978-1-4503-7613-6}
+\href{https://doi.org/10.1145/3385412.3385965}{doi:\nolinkurl{10.1145/3385412.3385965}}
+
+
 \bibitem[Bruant et~al\mbox{.}(2020)]%
         {bruant_systemverilog_2020}
 \bibfield{author}{\bibinfo{person}{Jean Bruant}, \bibinfo{person}{Pierre-Henri
@@ -230,6 +260,22 @@
 \href{https://doi.org/10.1145/1543135.1542517}{doi:\nolinkurl{10.1145/1543135.1542517}}
 
 
+\bibitem[Chen et~al\mbox{.}(2024)]%
+        {chen_allo_2024}
+\bibfield{author}{\bibinfo{person}{Hongzheng Chen}, \bibinfo{person}{Niansong
+  Zhang}, \bibinfo{person}{Shaojie Xiang}, \bibinfo{person}{Zhichen Zeng},
+  \bibinfo{person}{Mengjia Dai}, {and} \bibinfo{person}{Zhiru Zhang}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Allo: {A} {Programming} {Model} for {Composable}
+  {Accelerator} {Design}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2024}), \bibinfo{pages}{593--620}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3656401}{doi:\nolinkurl{10.1145/3656401}}
+
+
 \bibitem[Chen et~al\mbox{.}(2026)]%
         {chen_exploiting_2026}
 \bibfield{author}{\bibinfo{person}{Qinlin Chen}, \bibinfo{person}{Nairen
@@ -247,6 +293,36 @@
 \href{https://doi.org/10.1145/3808300}{doi:\nolinkurl{10.1145/3808300}}
 
 
+\bibitem[Chen et~al\mbox{.}(2023)]%
+        {chen_essence_2023}
+\bibfield{author}{\bibinfo{person}{Qinlin Chen}, \bibinfo{person}{Nairen
+  Zhang}, \bibinfo{person}{Jinpeng Wang}, \bibinfo{person}{Tian Tan},
+  \bibinfo{person}{Chang Xu}, \bibinfo{person}{Xiaoxing Ma}, {and}
+  \bibinfo{person}{Yue Li}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{The {Essence} of {Verilog}: {A} {Tractable} and
+  {Tested} {Operational} {Semantics} for {Verilog}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{7}, \bibinfo{number}{OOPSLA2} (\bibinfo{date}{Oct.}
+  \bibinfo{year}{2023}), \bibinfo{pages}{234--263}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3622805}{doi:\nolinkurl{10.1145/3622805}}
+
+
+\bibitem[Choi et~al\mbox{.}(2025)]%
+        {choi_revamping_2025}
+\bibfield{author}{\bibinfo{person}{Joonwon Choi}, \bibinfo{person}{Jaewoo Kim},
+  {and} \bibinfo{person}{Jeehoon Kang}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Revamping {Verilog} {Semantics} for {Foundational}
+  {Verification}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{OOPSLA2} (\bibinfo{date}{Oct.}
+  \bibinfo{year}{2025}), \bibinfo{pages}{950--977}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3763084}{doi:\nolinkurl{10.1145/3763084}}
+
+
 \bibitem[Chong(2021)]%
         {chong_clock_2021}
 \bibfield{author}{\bibinfo{person}{Ang~Boon Chong}.}
@@ -259,6 +335,21 @@
 \newblock
 \showISBNx{978-1-6654-3757-8}
 \href{https://doi.org/10.1109/CECIT53797.2021.00075}{doi:\nolinkurl{10.1109/CECIT53797.2021.00075}}
+
+
+\bibitem[Christensen et~al\mbox{.}(2021)]%
+        {christensen_wire_2021}
+\bibfield{author}{\bibinfo{person}{Michael Christensen},
+  \bibinfo{person}{Timothy Sherwood}, \bibinfo{person}{Jonathan Balkind}, {and}
+  \bibinfo{person}{Ben Hardekopf}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Wire sorts: a language abstraction for safe
+  hardware composition}. In \bibinfo{booktitle}{\emph{Proceedings of the 42nd
+  {ACM} {SIGPLAN} {International} {Conference} on {Programming} {Language}
+  {Design} and {Implementation}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{Virtual Canada}, \bibinfo{pages}{175--189}.
+\newblock
+\showISBNx{978-1-4503-8391-2}
+\href{https://doi.org/10.1145/3453483.3454037}{doi:\nolinkurl{10.1145/3453483.3454037}}
 
 
 \bibitem[Cui et~al\mbox{.}(2026)]%
@@ -304,6 +395,38 @@
 \newblock
 \showISSN{2475-1421}
 \href{https://doi.org/10.1145/3485542}{doi:\nolinkurl{10.1145/3485542}}
+
+
+\bibitem[Durst et~al\mbox{.}(2020)]%
+        {durst_type-directed_2020}
+\bibfield{author}{\bibinfo{person}{David Durst}, \bibinfo{person}{Matthew
+  Feldman}, \bibinfo{person}{Dillon Huff}, \bibinfo{person}{David Akeley},
+  \bibinfo{person}{Ross Daly}, \bibinfo{person}{Gilbert~Louis Bernstein},
+  \bibinfo{person}{Marco Patrignani}, \bibinfo{person}{Kayvon Fatahalian},
+  {and} \bibinfo{person}{Pat Hanrahan}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Type-directed scheduling of streaming
+  accelerators}. In \bibinfo{booktitle}{\emph{Proceedings of the 41st {ACM}
+  {SIGPLAN} {Conference} on {Programming} {Language} {Design} and
+  {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{London UK},
+  \bibinfo{pages}{408--422}.
+\newblock
+\showISBNx{978-1-4503-7613-6}
+\href{https://doi.org/10.1145/3385412.3385983}{doi:\nolinkurl{10.1145/3385412.3385983}}
+
+
+\bibitem[Fehr et~al\mbox{.}(2025)]%
+        {fehr_first-class_2025}
+\bibfield{author}{\bibinfo{person}{Mathieu Fehr}, \bibinfo{person}{Yuyou Fan},
+  \bibinfo{person}{Hugo Pompougnac}, \bibinfo{person}{John Regehr}, {and}
+  \bibinfo{person}{Tobias Grosser}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{First-{Class} {Verification} {Dialects} for
+  {MLIR}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2025}), \bibinfo{pages}{1466--1490}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3729309}{doi:\nolinkurl{10.1145/3729309}}
 
 
 \bibitem[Ferreira et~al\mbox{.}(2024)]%
@@ -400,6 +523,20 @@
 \href{https://doi.org/10.1145/3650212.3652114}{doi:\nolinkurl{10.1145/3650212.3652114}}
 
 
+\bibitem[Herklotz and Wickerson(2024)]%
+        {herklotz_hyperblock_2024}
+\bibfield{author}{\bibinfo{person}{Yann Herklotz} {and} \bibinfo{person}{John
+  Wickerson}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Hyperblock {Scheduling} for {Verified}
+  {High}-{Level} {Synthesis}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2024}), \bibinfo{pages}{1929--1953}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3656455}{doi:\nolinkurl{10.1145/3656455}}
+
+
 \bibitem[Hsing(2012)]%
         {aes128}
 \bibfield{author}{\bibinfo{person}{Homer Hsing}.}
@@ -442,6 +579,86 @@
 \href{https://doi.org/10.1109/ICCAD.2017.8203780}{doi:\nolinkurl{10.1109/ICCAD.2017.8203780}}
 
 
+\bibitem[Jang et~al\mbox{.}(2024)]%
+        {jang_modular_2024}
+\bibfield{author}{\bibinfo{person}{Minseong Jang}, \bibinfo{person}{Jungin
+  Rhee}, \bibinfo{person}{Woojin Lee}, \bibinfo{person}{Shuangshuang Zhao},
+  {and} \bibinfo{person}{Jeehoon Kang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Modular {Hardware} {Design} of {Pipelined}
+  {Circuits} with {Hazards}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2024}), \bibinfo{pages}{28--51}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3656378}{doi:\nolinkurl{10.1145/3656378}}
+
+
+\bibitem[Kim et~al\mbox{.}(2024)]%
+        {kim_unifying_2024}
+\bibfield{author}{\bibinfo{person}{Caleb Kim}, \bibinfo{person}{Pai Li},
+  \bibinfo{person}{Anshuman Mohan}, \bibinfo{person}{Andrew Butt},
+  \bibinfo{person}{Adrian Sampson}, {and} \bibinfo{person}{Rachit Nigam}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Unifying {Static} and {Dynamic} {Intermediate}
+  {Languages} for {Accelerator} {Generators}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{OOPSLA2} (\bibinfo{date}{Oct.}
+  \bibinfo{year}{2024}), \bibinfo{pages}{2242--2267}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3689790}{doi:\nolinkurl{10.1145/3689790}}
+
+
+\bibitem[Koeplinger et~al\mbox{.}(2018)]%
+        {koeplinger_spatial_2018}
+\bibfield{author}{\bibinfo{person}{David Koeplinger}, \bibinfo{person}{Matthew
+  Feldman}, \bibinfo{person}{Raghu Prabhakar}, \bibinfo{person}{Yaqi Zhang},
+  \bibinfo{person}{Stefan Hadjis}, \bibinfo{person}{Ruben Fiszel},
+  \bibinfo{person}{Tian Zhao}, \bibinfo{person}{Luigi Nardi},
+  \bibinfo{person}{Ardavan Pedram}, \bibinfo{person}{Christos Kozyrakis}, {and}
+  \bibinfo{person}{Kunle Olukotun}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Spatial: a language and compiler for application
+  accelerators}. In \bibinfo{booktitle}{\emph{Proceedings of the 39th {ACM}
+  {SIGPLAN} {Conference} on {Programming} {Language} {Design} and
+  {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{Philadelphia
+  PA USA}, \bibinfo{pages}{296--311}.
+\newblock
+\showISBNx{978-1-4503-5698-5}
+\href{https://doi.org/10.1145/3192366.3192379}{doi:\nolinkurl{10.1145/3192366.3192379}}
+
+
+\bibitem[Kong et~al\mbox{.}(2026)]%
+        {kong_improving_2026}
+\bibfield{author}{\bibinfo{person}{Sijie Kong}, \bibinfo{person}{Jingtao Xia},
+  \bibinfo{person}{Daniel Ruelas-Petrisko}, \bibinfo{person}{Zachary~D. Sisco},
+  \bibinfo{person}{Jonathan Balkind}, {and} \bibinfo{person}{Gus~Henry Smith}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Improving {Equality} {Saturation} for {EDA} via
+  {Semantic} {E}-{Graphs}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{10}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2026}), \bibinfo{pages}{1303--1326}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3808299}{doi:\nolinkurl{10.1145/3808299}}
+
+
+\bibitem[Law et~al\mbox{.}(2025)]%
+        {law_mechanized_2025}
+\bibfield{author}{\bibinfo{person}{Tony Law}, \bibinfo{person}{Delphine
+  Demange}, {and} \bibinfo{person}{Sandrine Blazy}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{A {Mechanized} {Semantics} for {Dataflow}
+  {Circuits}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{OOPSLA1} (\bibinfo{date}{April}
+  \bibinfo{year}{2025}), \bibinfo{pages}{507--533}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3720432}{doi:\nolinkurl{10.1145/3720432}}
+
+
 \bibitem[Le et~al\mbox{.}(2022)]%
         {le_finding_2022}
 \bibfield{author}{\bibinfo{person}{Quang~Loc Le}, \bibinfo{person}{Azalea
@@ -456,6 +673,22 @@
 \newblock
 \showISSN{2475-1421}
 \href{https://doi.org/10.1145/3527325}{doi:\nolinkurl{10.1145/3527325}}
+
+
+\bibitem[Lee et~al\mbox{.}(2020)]%
+        {lee_optimizing_2020}
+\bibfield{author}{\bibinfo{person}{DongKwon Lee}, \bibinfo{person}{Woosuk Lee},
+  \bibinfo{person}{Hakjoo Oh}, {and} \bibinfo{person}{Kwangkeun Yi}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Optimizing homomorphic evaluation circuits by
+  program synthesis and term rewriting}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 41st {ACM} {SIGPLAN}
+  {Conference} on {Programming} {Language} {Design} and {Implementation}}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{London UK},
+  \bibinfo{pages}{503--518}.
+\newblock
+\showISBNx{978-1-4503-7613-6}
+\href{https://doi.org/10.1145/3385412.3385996}{doi:\nolinkurl{10.1145/3385412.3385996}}
 
 
 \bibitem[Lee et~al\mbox{.}(2015)]%
@@ -553,6 +786,20 @@
 \href{https://doi.org/10.1145/3533767.3534380}{doi:\nolinkurl{10.1145/3533767.3534380}}
 
 
+\bibitem[Lööw(2025)]%
+        {loow_simulation_2025}
+\bibfield{author}{\bibinfo{person}{Andreas Lööw}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{The {Simulation} {Semantics} of {Synthesisable}
+  {Verilog}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{OOPSLA1} (\bibinfo{date}{April}
+  \bibinfo{year}{2025}), \bibinfo{pages}{1295--1320}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3720484}{doi:\nolinkurl{10.1145/3720484}}
+
+
 \bibitem[Ma et~al\mbox{.}(2022a)]%
         {ma_debugging_2022}
 \bibfield{author}{\bibinfo{person}{Jiacheng Ma}, \bibinfo{person}{Gefei Zuo},
@@ -590,6 +837,21 @@
 \newblock
   \bibinfo{howpublished}{\url{https://github.com/alexforencich/verilog-axis/commit/382226ad5966198862fb676c7a5810067c2c6a19}}.
 \newblock
+
+
+\bibitem[Malik et~al\mbox{.}(2025)]%
+        {malik_circuit_2025}
+\bibfield{author}{\bibinfo{person}{Raghav Malik}, \bibinfo{person}{Vedant
+  Paranjape}, {and} \bibinfo{person}{Milind Kulkarni}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Circuit {Optimization} using {Arithmetic} {Table}
+  {Lookups}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{9}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2025}), \bibinfo{pages}{301--323}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3729258}{doi:\nolinkurl{10.1145/3729258}}
 
 
 \bibitem[marsgod@opencores.org(2018)]%
@@ -643,6 +905,23 @@
 \newblock
 
 
+\bibitem[Nigam et~al\mbox{.}(2020)]%
+        {nigam_predictable_2020}
+\bibfield{author}{\bibinfo{person}{Rachit Nigam}, \bibinfo{person}{Sachille
+  Atapattu}, \bibinfo{person}{Samuel Thomas}, \bibinfo{person}{Zhijing Li},
+  \bibinfo{person}{Theodore Bauer}, \bibinfo{person}{Yuwei Ye},
+  \bibinfo{person}{Apurva Koti}, \bibinfo{person}{Adrian Sampson}, {and}
+  \bibinfo{person}{Zhiru Zhang}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Predictable accelerator design with time-sensitive
+  affine types}. In \bibinfo{booktitle}{\emph{Proceedings of the 41st {ACM}
+  {SIGPLAN} {Conference} on {Programming} {Language} {Design} and
+  {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{London UK},
+  \bibinfo{pages}{393--407}.
+\newblock
+\showISBNx{978-1-4503-7613-6}
+\href{https://doi.org/10.1145/3385412.3385974}{doi:\nolinkurl{10.1145/3385412.3385974}}
+
+
 \bibitem[Nigam et~al\mbox{.}(2023)]%
         {nigam_modular_2023}
 \bibfield{author}{\bibinfo{person}{Rachit Nigam},
@@ -669,6 +948,25 @@
 \newblock
 \showISSN{0360-0300, 1557-7341}
 \href{https://doi.org/10.1145/3464457}{doi:\nolinkurl{10.1145/3464457}}
+
+
+\bibitem[Pelton et~al\mbox{.}(2024)]%
+        {pelton_wavefront_2024}
+\bibfield{author}{\bibinfo{person}{Blake Pelton}, \bibinfo{person}{Adam Sapek},
+  \bibinfo{person}{Ken Eguro}, \bibinfo{person}{Daniel Lo},
+  \bibinfo{person}{Alessandro Forin}, \bibinfo{person}{Matt Humphrey},
+  \bibinfo{person}{Jinwen Xi}, \bibinfo{person}{David Cox},
+  \bibinfo{person}{Rajas Karandikar}, \bibinfo{person}{Johannes De~Fine~Licht},
+  \bibinfo{person}{Evgeny Babin}, \bibinfo{person}{Adrian Caulfield}, {and}
+  \bibinfo{person}{Doug Burger}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Wavefront {Threading} {Enables} {Effective}
+  {High}-{Level} {Synthesis}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{8}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2024}), \bibinfo{pages}{1066--1090}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3656420}{doi:\nolinkurl{10.1145/3656420}}
 
 
 \bibitem[Piedra(2017)]%
@@ -744,6 +1042,21 @@
 \href{https://doi.org/10.1109/ICCD.2013.6657085}{doi:\nolinkurl{10.1109/ICCD.2013.6657085}}
 
 
+\bibitem[Schuiki et~al\mbox{.}(2020)]%
+        {schuiki_llhd_2020}
+\bibfield{author}{\bibinfo{person}{Fabian Schuiki}, \bibinfo{person}{Andreas
+  Kurth}, \bibinfo{person}{Tobias Grosser}, {and} \bibinfo{person}{Luca
+  Benini}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{{LLHD}: a multi-level intermediate representation
+  for hardware description languages}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 41st {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design}
+  and {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{London
+  UK}, \bibinfo{pages}{258--271}.
+\newblock
+\showISBNx{978-1-4503-7613-6}
+\href{https://doi.org/10.1145/3385412.3386024}{doi:\nolinkurl{10.1145/3385412.3386024}}
+
+
 \bibitem[Shakya et~al\mbox{.}(2017)]%
         {shakya_benchmarking_2017}
 \bibfield{author}{\bibinfo{person}{Bicky Shakya}, \bibinfo{person}{Tony He},
@@ -769,6 +1082,20 @@
 \newblock
   \bibinfo{howpublished}{\url{https://verificationacademy.com/forums/t/assertion-to-check-a-signal-asserting-before-or-after-few-clock-cycles/36074}}.
 \newblock
+
+
+\bibitem[Sisco et~al\mbox{.}(2023)]%
+        {sisco_loop_2023}
+\bibfield{author}{\bibinfo{person}{Zachary~D. Sisco}, \bibinfo{person}{Jonathan
+  Balkind}, \bibinfo{person}{Timothy Sherwood}, {and} \bibinfo{person}{Ben
+  Hardekopf}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Loop {Rerolling} for {Hardware} {Decompilation}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{7}, \bibinfo{number}{PLDI} (\bibinfo{date}{June}
+  \bibinfo{year}{2023}), \bibinfo{pages}{420--442}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3591237}{doi:\nolinkurl{10.1145/3591237}}
 
 
 \bibitem[Sridharan et~al\mbox{.}(2007)]%
@@ -801,6 +1128,27 @@
 \href{https://doi.org/10.1145/3377811.3380441}{doi:\nolinkurl{10.1145/3377811.3380441}}
 
 
+\bibitem[Truong and Hanrahan(2019)]%
+        {truong_golden_2019}
+\bibfield{author}{\bibinfo{person}{Lenny Truong} {and} \bibinfo{person}{Pat
+  Hanrahan}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{A {Golden} {Age} of {Hardware} {Description}
+  {Languages}: {Applying} {Programming} {Language} {Techniques} to {Improve}
+  {Design} {Productivity}}. In \bibinfo{booktitle}{\emph{3rd {Summit} on
+  {Advances} in {Programming} {Languages} ({SNAPL} 2019)}}
+  \emph{(\bibinfo{series}{Leibniz {International} {Proceedings} in
+  {Informatics} ({LIPIcs})}, Vol.~\bibinfo{volume}{136})},
+  \bibfield{editor}{\bibinfo{person}{Benjamin~S. Lerner},
+  \bibinfo{person}{Rastislav Bodík}, {and} \bibinfo{person}{Shriram
+  Krishnamurthi}} (Eds.). \bibinfo{publisher}{Schloss Dagstuhl –
+  Leibniz-Zentrum für Informatik}, \bibinfo{address}{Dagstuhl, Germany},
+  \bibinfo{pages}{7:1--7:21}.
+\newblock
+\showISBNx{978-3-95977-113-9}
+\showISSN{1868-8969}
+\href{https://doi.org/10.4230/LIPIcs.SNAPL.2019.7}{doi:\nolinkurl{10.4230/LIPIcs.SNAPL.2019.7}}
+
+
 \bibitem[Usselmann(2012)]%
         {wishbone-arbiter}
 \bibfield{author}{\bibinfo{person}{Rudolf Usselmann}.}
@@ -809,6 +1157,21 @@
 \newblock
   \bibinfo{howpublished}{\url{https://opencores.org/projects/wb_conbus}}.
 \newblock
+
+
+\bibitem[Vega et~al\mbox{.}(2021)]%
+        {vega_reticle_2021}
+\bibfield{author}{\bibinfo{person}{Luis Vega}, \bibinfo{person}{Joseph
+  McMahan}, \bibinfo{person}{Adrian Sampson}, \bibinfo{person}{Dan Grossman},
+  {and} \bibinfo{person}{Luis Ceze}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Reticle: a virtual machine for programming modern
+  {FPGAs}}. In \bibinfo{booktitle}{\emph{Proceedings of the 42nd {ACM}
+  {SIGPLAN} {International} {Conference} on {Programming} {Language} {Design}
+  and {Implementation}}}. \bibinfo{publisher}{ACM}, \bibinfo{address}{Virtual
+  Canada}, \bibinfo{pages}{756--771}.
+\newblock
+\showISBNx{978-1-4503-8391-2}
+\href{https://doi.org/10.1145/3453483.3454075}{doi:\nolinkurl{10.1145/3453483.3454075}}
 
 
 \bibitem[Wikipedia(2025)]%
@@ -850,6 +1213,37 @@
 \newblock
 \showISBNx{978-1-66546-272-3}
 \href{https://doi.org/10.1109/MICRO56248.2022.00080}{doi:\nolinkurl{10.1109/MICRO56248.2022.00080}}
+
+
+\bibitem[Yan et~al\mbox{.}(2026)]%
+        {yan_verieq_2026}
+\bibfield{author}{\bibinfo{person}{Zhen Yan}, \bibinfo{person}{Yuanliang Chen},
+  \bibinfo{person}{Fuchen Ma}, \bibinfo{person}{Zehong Yu},
+  \bibinfo{person}{Dalong Shi}, {and} \bibinfo{person}{Yu Jiang}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{VeriEQ}: {Finding} {Verilog} {Simulators} and
+  {Synthesizers} {Bugs} with {Equivalence} {Circuit} {Transformation}}.
+\newblock \bibinfo{journal}{\emph{Proc. ACM Program. Lang.}}
+  \bibinfo{volume}{10}, \bibinfo{number}{OOPSLA1} (\bibinfo{date}{April}
+  \bibinfo{year}{2026}), \bibinfo{pages}{985--1013}.
+\newblock
+\showISSN{2475-1421}
+\href{https://doi.org/10.1145/3798235}{doi:\nolinkurl{10.1145/3798235}}
+
+
+\bibitem[Zagieboylo et~al\mbox{.}(2022)]%
+        {zagieboylo_pdl_2022}
+\bibfield{author}{\bibinfo{person}{Drew Zagieboylo}, \bibinfo{person}{Charles
+  Sherk}, \bibinfo{person}{Gookwon~Edward Suh}, {and}
+  \bibinfo{person}{Andrew~C. Myers}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{PDL}: a high-level hardware design language for
+  pipelined processors}. In \bibinfo{booktitle}{\emph{Proceedings of the 43rd
+  {ACM} {SIGPLAN} {International} {Conference} on {Programming} {Language}
+  {Design} and {Implementation}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{San Diego CA USA}, \bibinfo{pages}{719--732}.
+\newblock
+\showISBNx{978-1-4503-9265-5}
+\href{https://doi.org/10.1145/3519939.3523455}{doi:\nolinkurl{10.1145/3519939.3523455}}
 
 
 \bibitem[Zhao et~al\mbox{.}(2022)]%
