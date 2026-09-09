@@ -7,7 +7,7 @@ One fundamental aspect that distinguishes hardware design from software programm
 When writing HDL code, hardware designers often need to reason about how signals evolve across clock cycles, such as by mentally tracing their waveforms~\cite{vcd-waveform}, and ensure specific temporal relationships between signals, such as making one signal available a particular number of clock cycles before or after another~\cite{temporal-relationship}.
 However, reasoning about such temporal behavior of hardware designs remains unexplored in existing research on hardware static analysis~\cite{cui_chisa_2026,chen_exploiting_2026}, which has primarily focused on developing static analysis infrastructures for popular HDLs~\cite{bachrach_chisel_2012,ieee_verilog,ieee_systemverilog} to facilitate the development of new hardware static analyses.
 
-To address this research gap, we present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel~\cite{bachrach_chisel_2012}---the most popular \emph{modern} hardware description language (HDL).
+To address this research gap, we present \emph{temporal influence analysis} (\tia), the first static analysis to reason about the temporal behavior of hardware designs written in Chisel~\cite{bachrach_chisel_2012,izraelevitz_reusability_2017}---the most popular \emph{modern} hardware description language (HDL).
 \tia aims to answer a fundamental question about hardware temporal behavior:
 \begin{quote}
     \textit{After which clock cycles can each input to a circuit ``influence'' each circuit location?}

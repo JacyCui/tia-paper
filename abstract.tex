@@ -1,4 +1,31 @@
 \begin{abstract}
+Recent research has demonstrated the potential of applying static analysis to hardware description languages (HDLs), such as for lightweight hardware bug detection.
+One fundamental aspect distinguishing hardware design from software programming is the explicit notion of \emph{temporal} behavior with respect to clock cycles.
+Signal asynchrony bugs, an important category of hardware bugs that harm hardware system reliability and repeatedly appear in popular open-source hardware projects, directly stem from hardware designers' incorrect implementation of intended temporal behavior.
+We found that the essence of these bugs lies in hardware designers' misprediction of ``after which clock cycles a change in the value of an input to a circuit can \emph{cause a change in the value of} (i.e., \emph{influence}) another location in the circuit?''.
+However, this fundamental question remains unexplored in existing static analysis research for HDLs.
+
+In this work, we formulate this question as a static analysis problem for the first time and present the first static analysis for this problem---temporal influence analysis (\tia).
+The core insight of \tia is to model the $i$-cycle-later influence of changing any input port $p$ as a special object $o_p^i$, and to propagate and evolve such influences through the circuit to determine how any circuit location $x$ is influenced, represented as a set $\absT(x)$ of such objects.
+Specifically, $o_p^i \in \absT(x)$ means that if the value of $p$ changes, then the value of $x$ can change $i$ clock cycles later.
+We also prove properties about \tia's soundness, convergence, and precision.
+
+With \tia, detecting asynchrony between any two signals $x$ and $y$ can be accomplished by simply comparing $\absT(x)$ and $\absT(y)$, which we present as a client analysis on top of \tia.
+Beyond supporting hardware bug detection, we also find that \tia has the potential to support hardware security analysis (e.g., detecting timing-flow information leaks) and hardware design understanding (e.g., inferring timeline intervals), which we present as two additional client analyses on top of \tia.
+
+As a proof of concept, we implement \tia and its three client analyses for Chisel---the most popular modern HDL.
+We evaluate \tia from two aspects:
+(1) \emph{Fundamental Capabilities}:
+\tia efficiently analyzes 13 real-world hardware designs from popular Chisel projects, averaging 2.2K GitHub stars and 451.8K LoC, within 3.3 minutes on average.
+\tia achieves strong empirical soundness (97.3\% recall on average) and fine precision (62.6\% precision on average) on these real-world designs.
+(2) \emph{Practical Potential}:
+The three client analyses built on \tia successfully capture all signal asynchrony bugs (85.7\% precision), timing-flow information leaks (75\% precision), and timeline intervals (92.4\% precision for lower bounds and 72.7\% precision for upper bounds) in benchmarks derived from related literature, achieving 100\% recall in all three tasks.
+These results showcase the potential of \tia to support diverse hardware analysis clients.
+By open-sourcing the implementations of \tia and its three client analyses, we seek to help advance static analysis for modern hardware designs.
+\end{abstract}
+
+\begin{comment}
+\begin{abstract}
 Recent research has demonstrated the underexplored potential of applying static analysis to hardware description languages (HDLs) for lightweight hardware bug detection, security analysis, and design understanding.
 One fundamental aspect distinguishing hardware design from software programming is the explicit notion of temporal behavior with respect to clock cycles.
 However, existing research on hardware static analysis has not explored reasoning about the temporal behavior of hardware designs.
@@ -17,3 +44,4 @@ For the practical potential of \tia, we demonstrate that the three client analys
 These results showcase the potential of \tia to support diverse hardware analysis clients.
 By open-sourcing the implementations of \tia and its three demonstrating client analyses, we seek to help advance static analysis for modern hardware designs.
 \end{abstract}
+\end{comment}
